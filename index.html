@@ -44,16 +44,17 @@ body {
 }
 
 .page {
-    display: none;
+    display: none !important;
 }
 
 .page.active {
-    display: block;
+    display: block !important;
     animation: fadeIn 0.5s ease-out;
 }
 
 /* INDEX PAGE */
-#index {
+#index.page.active {
+    display: flex !important;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -97,10 +98,12 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: clamp(3rem, 8vw, 6.5rem);
     font-weight: 700;
-    color: var(--charcoal);
+    color: #FFFFFF;
     line-height: 1.1;
     margin-bottom: 30px;
     letter-spacing: -0.02em;
+    -webkit-text-stroke: 1px rgba(26, 26, 26, 0.3);
+    text-stroke: 1px rgba(26, 26, 26, 0.3);
 }
 
 .main-subtitle {
@@ -415,7 +418,7 @@ footer {
     <div class="hero-section">
         <div class="year-label">2 0 2 6</div>
         <h1 class="main-title">
-            M-MALL
+            M·MALL
             <span class="main-subtitle">INVITED</span>
         </h1>
         <p class="hero-description">
@@ -523,7 +526,7 @@ function showPage(cat) {
         
         let html = '<div class="header">';
         html += '<button class="back-link" onclick="showPage(\'index\')">← 돌아가기</button>';
-        html += '<div class="logo">M-MALL INVITED</div>';
+        html += '<div class="logo">M·MALL INVITED</div>';
         html += '</div>';
         
         html += '<div class="page-hero">';
@@ -551,7 +554,7 @@ function showPage(cat) {
         });
         
         html += '</div>';
-        html += '<footer>© 2026 M-MALL INVITED · ' + info.title.toUpperCase() + '</footer>';
+        html += '<footer>© 2026 M·MALL INVITED · ' + info.title.toUpperCase() + '</footer>';
         
         page.innerHTML = html;
     }
