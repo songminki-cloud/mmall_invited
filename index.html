@@ -449,18 +449,41 @@ footer {
     .category-card {
         padding: 40px 30px;
         min-height: 250px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 15px rgba(26, 26, 26, 0.05);
     }
     
     .category-card::before {
         display: none; /* 모바일에서는 아래에서 올라오는 효과 제거 */
     }
     
-    /* 터치 시 효과: 살짝 확대 + 그림자 강조 */
+    /* 터치 시 강력한 효과: 크게 확대 + 강한 그림자 + 골드 글로우 */
     .category-card:active {
-        transform: scale(0.98);
-        box-shadow: 0 20px 60px rgba(184, 149, 106, 0.3);
-        background: linear-gradient(135deg, var(--warm-white) 0%, rgba(184, 149, 106, 0.1) 100%);
+        transform: scale(1.05) translateY(-8px);
+        box-shadow: 
+            0 30px 80px rgba(184, 149, 106, 0.4),
+            0 0 40px rgba(184, 149, 106, 0.3),
+            inset 0 0 60px rgba(184, 149, 106, 0.1);
+        background: linear-gradient(135deg, 
+            rgba(255, 254, 249, 1) 0%, 
+            rgba(184, 149, 106, 0.15) 50%,
+            rgba(255, 254, 249, 1) 100%);
+        border: 2px solid rgba(184, 149, 106, 0.4);
+    }
+    
+    .category-card:active .category-number {
+        opacity: 0.3;
+        transform: scale(1.1);
+    }
+    
+    .category-card:active .category-title {
+        color: var(--gold);
+        transform: translateX(5px);
+    }
+    
+    .category-card:active .category-count {
+        color: var(--charcoal);
+        font-weight: 600;
     }
     
     .category-number {
