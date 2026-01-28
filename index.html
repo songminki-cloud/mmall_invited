@@ -1422,9 +1422,7 @@ function showPage(cat) {
             html += '<p class="brand-headline">' + b.headline + '</p>';
             html += '<p class="brand-definition">' + b.definition + '</p>';
             html += '<p class="brand-description">' + b.description + '</p>';
-            if (b.website) {
-                html += '<a href="' + b.website + '" target="_blank" rel="noopener noreferrer" class="brand-link">브랜드 홈페이지 →</a>';
-            }
+            html += '<a href="https://www.google.com/search?q=' + encodeURIComponent(b.name) + '" target="_blank" rel="noopener noreferrer" class="brand-link">구글 검색하기 →</a>';
             html += '</div>';
         });
         
