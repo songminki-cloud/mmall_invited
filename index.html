@@ -228,9 +228,9 @@ body {
 
 /* A-Z Brand Index - Minimal Design */
 .brand-index-section {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 80px auto 60px;
-    padding: 60px 40px;
+    padding: 60px 80px;
     border-top: 1px solid rgba(184, 149, 106, 0.2);
 }
 
@@ -243,23 +243,25 @@ body {
 }
 
 .brand-index-list {
-    column-count: 4;
+    column-count: 5;
     column-gap: 40px;
+    margin: 0 auto;
 }
 
 .brand-index-item {
     font-size: 0.9rem;
     color: var(--charcoal);
-    padding: 8px 0;
+    padding: 10px 0;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: color 0.2s ease, padding-left 0.2s ease;
     break-inside: avoid;
     border-bottom: 1px solid rgba(184, 149, 106, 0.08);
+    display: block;
 }
 
 .brand-index-item:hover {
     color: var(--gold);
-    padding-left: 8px;
+    padding-left: 12px;
 }
 
 .stat-item {
