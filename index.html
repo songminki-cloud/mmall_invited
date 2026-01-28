@@ -648,9 +648,30 @@ footer {
         gap: 1px;
     }
     
+    /* 모바일: hover 효과 완전 제거 */
     .category-card {
         padding: 40px 30px;
         min-height: 280px;
+        border: 1px solid rgba(184, 149, 106, 0.2);
+    }
+    
+    .category-card::before {
+        display: none !important;
+    }
+    
+    .category-card:hover {
+        background: var(--warm-white);
+        color: var(--charcoal);
+        border-color: rgba(184, 149, 106, 0.2);
+    }
+    
+    .category-card:active {
+        background: rgba(245, 243, 237, 0.8);
+        border-color: var(--gold);
+    }
+    
+    .category-card .category-count {
+        color: var(--gold) !important;
     }
     
     .category-number {
@@ -1384,6 +1405,7 @@ let allBrands = [];
 
 // Build searchable brand list from DATA
 function buildBrandIndex() {
+    console.log('Building brand index...');
     allBrands = [];
     const categoryNames = {
         'philosophy': 'Philosophy',
@@ -1406,11 +1428,15 @@ function buildBrandIndex() {
             });
         });
     }
+    console.log('Brand index built. Total brands:', allBrands.length);
 }
 
 function searchBrands(query) {
+    console.log('searchBrands called with:', query);
+    
     if (!query || query.length < 1) {
-        document.getElementById('searchResults').classList.remove('active');
+        const resultsDiv = document.getElementById('searchResults');
+        if (resultsDiv) resultsDiv.classList.remove('active');
         return;
     }
     
@@ -1420,9 +1446,15 @@ function searchBrands(query) {
         brand.headline.toLowerCase().includes(searchLower) ||
         brand.definition.toLowerCase().includes(searchLower) ||
         brand.country.toLowerCase().includes(searchLower)
-    ).slice(0, 10); // 최대 10개만 표시
+    ).slice(0, 10);
+    
+    console.log('Found results:', results.length);
     
     const resultsDiv = document.getElementById('searchResults');
+    if (!resultsDiv) {
+        console.error('searchResults div not found!');
+        return;
+    }
     
     if (results.length === 0) {
         resultsDiv.innerHTML = '<div style="padding: 20px; text-align: center; color: #8B7355;">검색 결과가 없습니다</div>';
@@ -1442,16 +1474,17 @@ function searchBrands(query) {
     
     resultsDiv.innerHTML = html;
     resultsDiv.classList.add('active');
+    console.log('Search results displayed');
 }
 
 function searchBrand(brandName) {
-    // A-Z 인덱스에서 클릭 시 검색창에 넣고 결과 표시
-    const searchInput = document.getElementById('brandSearch');
-    searchInput.value = brandName;
-    searchBrands(brandName);
+    // A-Z 인덱스에서 클릭 시 해당 브랜드 찾아서 바로 이동
+    const brand = allBrands.find(b => b.name === brandName);
     
-    // 검색창으로 스크롤
-    searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (brand) {
+        // 바로 해당 카테고리 페이지로 이동
+        goToBrand(brand.category, brand.name);
+    }
 }
 
 function goToBrand(category, brandName) {
@@ -1459,19 +1492,29 @@ function goToBrand(category, brandName) {
     showPage(category);
     
     // 검색 결과 닫기
-    document.getElementById('searchResults').classList.remove('active');
-    document.getElementById('brandSearch').value = '';
+    const searchResults = document.getElementById('searchResults');
+    const searchInput = document.getElementById('brandSearch');
+    if (searchResults) searchResults.classList.remove('active');
+    if (searchInput) searchInput.value = '';
     
     // 약간의 딜레이 후 해당 브랜드로 스크롤
     setTimeout(() => {
         const brandCards = document.querySelectorAll('.brand-name');
         for (const card of brandCards) {
-            if (card.textContent === brandName) {
-                card.closest('.brand-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (card.textContent.trim() === brandName.trim()) {
+                const brandCard = card.closest('.brand-card');
+                if (brandCard) {
+                    brandCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // 하이라이트 효과
+                    brandCard.style.backgroundColor = 'rgba(184, 149, 106, 0.1)';
+                    setTimeout(() => {
+                        brandCard.style.backgroundColor = '';
+                    }, 2000);
+                }
                 break;
             }
         }
-    }, 300);
+    }, 500);
 }
 
 // Initialize search on page load
@@ -1479,15 +1522,18 @@ window.addEventListener('DOMContentLoaded', function() {
     buildBrandIndex();
     
     const searchInput = document.getElementById('brandSearch');
-    searchInput.addEventListener('input', function(e) {
-        searchBrands(e.target.value);
-    });
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            searchBrands(e.target.value);
+        });
+    }
     
     // Click outside to close search results
     document.addEventListener('click', function(e) {
         const searchSection = document.querySelector('.search-section-index');
-        if (searchSection && !searchSection.contains(e.target)) {
-            document.getElementById('searchResults').classList.remove('active');
+        const searchResults = document.getElementById('searchResults');
+        if (searchSection && searchResults && !searchSection.contains(e.target)) {
+            searchResults.classList.remove('active');
         }
     });
 });
