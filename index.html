@@ -1383,9 +1383,13 @@ const INFO = {
 function showPage(cat) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     
+    // 즉시 스크롤
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
     if (cat === 'index') {
         document.getElementById('index').classList.add('active');
-        window.scrollTo(0, 0);
         return;
     }
     
@@ -1431,7 +1435,13 @@ function showPage(cat) {
     }
     
     page.classList.add('active');
-    window.scrollTo(0, 0);
+    
+    // 페이지 활성화 후 다시 한번 스크롤 (확실하게)
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    }, 0);
 }
 
 function toggleNav() {
