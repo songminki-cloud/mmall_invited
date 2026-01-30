@@ -360,9 +360,32 @@ body {
     border: 1px solid rgba(184, 149, 106, 0.15);
 }
 
-.category-card.favorites-card .category-number {
-    color: var(--gold);
-    opacity: 0.25;
+.favorites-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.25s ease;
+}
+
+.favorites-icon.active {
+    background: var(--gold);
+}
+
+.fav-heart {
+    font-size: 1.15rem;
+    color: var(--bronze);
+    transition: all 0.25s ease;
+}
+
+.favorites-icon.active .fav-heart {
+    content: '♥';
+    color: white;
 }
 
 .category-card.favorites-card .category-title {
@@ -985,7 +1008,9 @@ footer {
     <div class="categories-grid">
         <div class="category-card favorites-card" onclick="showPage('favorites')">
             <div>
-                <div class="category-number">🤍</div>
+                <div class="favorites-icon" id="favIcon">
+                    <span class="fav-heart">♡</span>
+                </div>
                 <h2 class="category-title">My Favorites</h2>
                 <p class="category-subtitle">내가 좋아요한 브랜드들. 나만의 특별한 컬렉션.</p>
             </div>
@@ -3098,6 +3123,14 @@ function toggleFavorite(brandName, event) {
                     }
                     saveFavorites();
                     
+                    // 모든 페이지의 해당 브랜드 버튼 상태 업데이트
+                    document.querySelectorAll(`.favorite-btn[data-brand="${brandName.replace(/"/g, '&quot;')}"]`).forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // A-Z 인덱스 업데이트
+                    updateAZFavorites();
+                    
                     // 스크롤 이벤트 리스너로 위치 강제 유지
                     const preventScroll = () => {
                         window.scrollTo(0, currentScrollY);
@@ -3165,8 +3198,22 @@ function toggleFavorite(brandName, event) {
 
 function updateFavoriteCount() {
     const countElem = document.getElementById('favCount');
+    const iconElem = document.getElementById('favIcon');
+    const heartElem = iconElem ? iconElem.querySelector('.fav-heart') : null;
+    
     if (countElem) {
         countElem.textContent = `${favorites.length} BRANDS →`;
+    }
+    
+    // Update icon state based on count
+    if (iconElem && heartElem) {
+        if (favorites.length > 0) {
+            iconElem.classList.add('active');
+            heartElem.textContent = '♥';
+        } else {
+            iconElem.classList.remove('active');
+            heartElem.textContent = '♡';
+        }
     }
 }
 
