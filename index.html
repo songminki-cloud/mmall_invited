@@ -64,6 +64,20 @@ body {
     to { opacity: 0; }
 }
 
+@keyframes fadeOutScale {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-15px) scale(0.96);
+        max-height: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 .page {
     display: none !important;
     width: 100%;
@@ -573,6 +587,7 @@ body {
     transform: translateY(20px);
     animation: fadeInUp 0.6s ease-out forwards;
     position: relative;
+    transition: all 1s ease-in-out;
 }
 
 .brand-card:active {
@@ -3057,7 +3072,79 @@ function toggleFavorite(brandName, event) {
         event.stopPropagation();
     }
     
-    if (favorites.has(brandName)) {
+    const isRemoving = favorites.has(brandName);
+    
+    if (isRemoving) {
+        // Favorites 페이지에서 제거 시 애니메이션 효과
+        const favPage = document.getElementById('favorites');
+        if (favPage.classList.contains('active')) {
+            // 현재 스크롤 위치 저장
+            const currentScrollY = window.scrollY;
+            
+            // 해당 브랜드 카드 찾기
+            const cards = favPage.querySelectorAll('.brand-card');
+            let targetCard = null;
+            cards.forEach(card => {
+                const nameElem = card.querySelector('.brand-name');
+                if (nameElem && nameElem.textContent === brandName) {
+                    targetCard = card;
+                }
+            });
+            
+            if (targetCard) {
+                // 카드에 사라지는 애니메이션 추가
+                targetCard.style.animation = 'fadeOutScale 1s ease-in-out forwards';
+                targetCard.style.pointerEvents = 'none';
+                
+                // 그리드에 부드러운 transition 추가
+                const brandsGrid = favPage.querySelector('.brands-grid');
+                if (brandsGrid) {
+                    brandsGrid.style.transition = 'all 1s ease-in-out';
+                }
+                
+                // 애니메이션 완료 후 실제 제거
+                setTimeout(() => {
+                    favorites.delete(brandName);
+                    saveFavorites();
+                    
+                    // 스크롤 이벤트 리스너로 위치 강제 유지
+                    const preventScroll = () => {
+                        window.scrollTo(0, currentScrollY);
+                    };
+                    
+                    // 스크롤 방지
+                    window.addEventListener('scroll', preventScroll);
+                    
+                    // 페이지 재렌더링
+                    const brandsContainer = favPage.querySelector('.brands-grid');
+                    if (brandsContainer) {
+                        // 기존 카드만 제거하고 다시 그리기
+                        targetCard.remove();
+                        
+                        // 카운트 업데이트
+                        const countElem = favPage.querySelector('.brand-count');
+                        if (countElem) {
+                            countElem.textContent = `${favorites.size} BRANDS`;
+                        }
+                        
+                        // 좋아요 없으면 전체 리렌더
+                        if (favorites.size === 0) {
+                            showPage('favorites');
+                        }
+                    }
+                    
+                    // 스크롤 위치 복원 및 리스너 제거
+                    setTimeout(() => {
+                        window.removeEventListener('scroll', preventScroll);
+                        window.scrollTo(0, currentScrollY);
+                    }, 10);
+                }, 1000);
+                
+                return; // 여기서 함수 종료
+            }
+        }
+        
+        // Favorites 페이지가 아닌 경우 일반 처리
         favorites.delete(brandName);
     } else {
         favorites.add(brandName);
@@ -3074,9 +3161,9 @@ function toggleFavorite(brandName, event) {
         }
     });
     
-    // Re-render favorites page if currently viewing
+    // Re-render favorites page if currently viewing (추가된 경우만)
     const favPage = document.getElementById('favorites');
-    if (favPage.classList.contains('active')) {
+    if (favPage.classList.contains('active') && !isRemoving) {
         showPage('favorites');
     }
 }
