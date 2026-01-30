@@ -2949,16 +2949,29 @@ function shareFavorites() {
         return;
     }
     
-    // 좋아요한 브랜드 리스트 생성
-    const brandList = Array.from(favorites).sort();
+    // 좋아요한 브랜드를 페이지 표시 순서대로 (favorites Set의 순서 유지)
+    const favBrands = [];
+    for (const [category, brands] of Object.entries(DATA)) {
+        brands.forEach(b => {
+            if (favorites.has(b.name)) {
+                favBrands.push(b.name);
+            }
+        });
+    }
+    
+    // 현재 날짜 및 시간
+    const now = new Date();
+    const dateStr = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}.${String(now.getDate()).padStart(2, '0')}`;
+    const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
     
     // 공유 텍스트 생성
-    let shareText = '🤍 M·MALL INVITED - My Favorites\n\n';
-    shareText += `총 ${brandList.length}개 브랜드\n\n`;
-    brandList.forEach((brand, index) => {
+    let shareText = 'M·MALL INVITED\n';
+    shareText += 'My Favorites\n\n';
+    shareText += `총 ${favBrands.length}개 브랜드\n\n`;
+    favBrands.forEach((brand, index) => {
         shareText += `${index + 1}. ${brand}\n`;
     });
-    shareText += '\n✨ M·MALL INVITED 2026';
+    shareText += `\n${dateStr} ${timeStr}`;
     
     // Web Share API 지원 여부 확인 (주로 모바일)
     if (navigator.share) {
