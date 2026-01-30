@@ -59,6 +59,11 @@ body {
     to { opacity: 1; }
 }
 
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 .page {
     display: none !important;
     width: 100%;
@@ -527,6 +532,28 @@ body {
     color: var(--gold);
 }
 
+.share-btn {
+    margin-top: 25px;
+    padding: 10px 25px;
+    background: transparent;
+    color: var(--bronze);
+    border: 1px solid rgba(184, 149, 106, 0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.share-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.share-btn:active {
+    background: rgba(184, 149, 106, 0.05);
+}
+
 .brands-grid {
     max-width: 1400px;
     margin: 40px auto;
@@ -979,7 +1006,7 @@ footer {
                 <h2 class="category-title">Narrative</h2>
                 <p class="category-subtitle">강력한 스토리텔링으로 감정을 움직이는 브랜드들. 제품 너머의 이야기가 팬덤을 만든다.</p>
             </div>
-            <div class="category-count">25 BRANDS →</div>
+            <div class="category-count">26 BRANDS →</div>
         </div>
         <div class="category-card" onclick="showPage('inspiration')">
             <div>
@@ -987,7 +1014,7 @@ footer {
                 <h2 class="category-title">Inspiration</h2>
                 <p class="category-subtitle">영감을 주는 공간과 경험. 방문 자체가 여정이 되는 곳, 삶의 방식을 제안하는 브랜드.</p>
             </div>
-            <div class="category-count">21 BRANDS →</div>
+            <div class="category-count">24 BRANDS →</div>
         </div>
         <div class="category-card" onclick="showPage('select_shop')">
             <div>
@@ -1092,10 +1119,10 @@ footer {
                 디스트릭트 비전 (District Vision)
             </div>
             <div class="brand-index-item" onclick="searchBrand('디앤디파트먼트 (D&Department)')">
-                디앤디파트먼트 (D&Department)
+                디앤디파트먼트 (D&amp;Department)
             </div>
             <div class="brand-index-item" onclick="searchBrand('디에스앤더가 (D.S. & DURGA)')">
-                디에스앤더가 (D.S. & DURGA)
+                디에스앤더가 (D.S. &amp; DURGA)
             </div>
             <div class="brand-index-item" onclick="searchBrand('떠그클럽 (Thug Club)')">
                 떠그클럽 (Thug Club)
@@ -1145,11 +1172,16 @@ footer {
             <div class="brand-index-item" onclick="searchBrand('모노하 (Monoha)')">
                 모노하 (Monoha)
             </div>
+            <div class="brand-index-item" onclick="searchBrand('모모스커피 (Momos Coffee)')">
+                모모스커피 (Momos Coffee)
+            </div>
             <div class="brand-index-item" onclick="searchBrand('모자이크 (Mosaic)')">
                 모자이크 (Mosaic)
             </div>
-            <div class="brand-index-item" onclick="searchBrand('뮬러 반 세베렌 (Muller Van Severen)')">
-                뮬러 반 세베렌 (Muller Van Severen)
+            <div class="brand-index-item" onclick="searchBrand('뮬러 반 세베렌
+(Muller Van Severen)')">
+                뮬러 반 세베렌
+(Muller Van Severen)
             </div>
             <div class="brand-index-item" onclick="searchBrand('미스테리 랜치 (Mystery Ranch)')">
                 미스테리 랜치 (Mystery Ranch)
@@ -1174,9 +1206,6 @@ footer {
             </div>
             <div class="brand-index-item" onclick="searchBrand('본봄 (Bonbom)')">
                 본봄 (Bonbom)
-            </div>
-            <div class="brand-index-item" onclick="searchBrand('본앤브레드')">
-                본앤브레드
             </div>
             <div class="brand-index-item" onclick="searchBrand('본톤토이즈 (Bon Ton Toys)')">
                 본톤토이즈 (Bon Ton Toys)
@@ -1211,8 +1240,8 @@ footer {
             <div class="brand-index-item" onclick="searchBrand('산산기어 (San San Gear)')">
                 산산기어 (San San Gear)
             </div>
-            <div class="brand-index-item" onclick="searchBrand('산타 마리아 노벨라')">
-                산타 마리아 노벨라
+            <div class="brand-index-item" onclick="searchBrand('산타 마리아 노벨라 (Santa Maria Nobella)')">
+                산타 마리아 노벨라 (Santa Maria Nobella)
             </div>
             <div class="brand-index-item" onclick="searchBrand('새티스파이 (Satisfy)')">
                 새티스파이 (Satisfy)
@@ -1248,7 +1277,7 @@ footer {
                 스킴스 (SKIMS)
             </div>
             <div class="brand-index-item" onclick="searchBrand('스포티 앤 리치 (Sporty & Rich)')">
-                스포티 앤 리치 (Sporty & Rich)
+                스포티 앤 리치 (Sporty &amp; Rich)
             </div>
             <div class="brand-index-item" onclick="searchBrand('슬로우 스테디 클럽')">
                 슬로우 스테디 클럽
@@ -1271,8 +1300,8 @@ footer {
             <div class="brand-index-item" onclick="searchBrand('아비에무아 (Àvie Muah)')">
                 아비에무아 (Àvie Muah)
             </div>
-            <div class="brand-index-item" onclick="searchBrand('아스티에 드 빌라트')">
-                아스티에 드 빌라트
+            <div class="brand-index-item" onclick="searchBrand('아스티에 드 빌라트 (ASTIER de VILLATTE)')">
+                아스티에 드 빌라트 (ASTIER de VILLATTE)
             </div>
             <div class="brand-index-item" onclick="searchBrand('아워 레가시 (Our Legacy)')">
                 아워 레가시 (Our Legacy)
@@ -1445,8 +1474,8 @@ footer {
             <div class="brand-index-item" onclick="searchBrand('티퍼런스 (Teafference)')">
                 티퍼런스 (Teafference)
             </div>
-            <div class="brand-index-item" onclick="searchBrand('틴에이지 엔지니어링')">
-                틴에이지 엔지니어링
+            <div class="brand-index-item" onclick="searchBrand('틴에이지 엔지니어링 (Teenage Enginneering)')">
+                틴에이지 엔지니어링 (Teenage Enginneering)
             </div>
             <div class="brand-index-item" onclick="searchBrand('팀 왕 디자인 (TEAM WANG design)')">
                 팀 왕 디자인 (TEAM WANG design)
@@ -1507,6 +1536,8 @@ footer {
             </div>
         </div>
     </div>
+    </div>
+    </div>
 </div>
         
         </div>
@@ -1542,15 +1573,1364 @@ footer {
 </div>
 
 <script>
-const DATA = {"philosophy": [{"no": "1", "category": "Philosophy", "country": "Korea", "name": "포스트 아카이브 팩션 (PAF)", "headline": "Deconstructive Pinnacle", "definition": "해체주의 패션의 정점", "description": "루이비통과 협업하며 옷을 예술품의 반열에 올린 브랜드. 전 세계가 주목하는 가장 독창적인 패턴과 실루엣을 보유했습니다.", "website": ""}, {"no": "2", "category": "Philosophy", "country": "Korea", "name": "지용킴 (JiyongKim)", "headline": "Sun-bleached Future", "definition": "햇빛이 만든 유일무이한 패턴", "description": "자연광에 원단을 노출시키는 'Sun-bleach' 기법으로 지속 가능성과 희소성을 동시에 확보한 글로벌 라이징 스타입니다.", "website": ""}, {"no": "3", "category": "Philosophy", "country": "Korea", "name": "르917 (르구일칠)", "headline": "Silent K-Luxury", "definition": "한국의 '더 로우', 조용한 럭셔리", "description": "로고 없이 오직 소재와 실루엣만으로 승부하는 브랜드. 우영미와 준지가 로고 플레이로 소비될 때, 성숙하고 감도 높은 고객들은 이곳으로 이동했습니다.", "website": ""}, {"no": "4", "category": "Philosophy", "country": "Korea", "name": "엑스림 (XLIM)", "headline": "The New Structure", "definition": "건축과 패션의 경계, 에피소드", "description": "현재 패션 씬에서 가장 뜨거운 팬덤을 가진 브랜드. 건축적인 절개 라인과 독특한 염색 기법으로 스트릿 패션을 예술의 경지로 끌어올렸습니다.", "website": ""}, {"no": "5", "category": "Philosophy", "country": "Denmark", "name": "프라마 (FRAMA)", "headline": "Architecture of Senses", "definition": "공간을 규정하는 날것의 미학", "description": "코펜하겐의 오래된 약국에서 시작된 디자인 스튜디오. 가공되지 않은 나무와 금속 등 소재의 물성을 그대로 살린 가구와 오브제, 자연의 향으로 전 세계 크리에이터들의 공간을 점령했습니다.", "website": ""}, {"no": "6", "category": "Philosophy", "country": "USA", "name": "디스트릭트 비전 (District Vision)", "headline": "Running as Meditation", "definition": "정신적 수양을 위한 러닝 아이웨어", "description": "\"달리기는 명상이다\"라는 철학을 가진 뉴욕 브랜드. 단순한 운동이 아닌 정신적 수양을 위한 도구로 접근해 웰니스 트렌드를 이끕니다.", "website": ""}, {"no": "7", "category": "Philosophy", "country": "UK", "name": "퍼퓨머 H (Perfumer H)", "headline": "Hand-blown Scent", "definition": "유리 장인이 불어 만든 향수", "description": "조향사 린 해리스가 만든 영국 브랜드로, 모든 병을 장인이 직접 만듭니다. 이솝을 졸업한 취향 좋은 사람들이 정착하는 '향수계의 공예품'입니다.", "website": ""}, {"no": "8", "category": "Philosophy", "country": "USA (NY)", "name": "디에스앤더가 (D.S. & DURGA)", "headline": "Perfume is Armchair Travel", "definition": "향기로 떠나는 브루클린의 예술 여행", "description": "뮤지션과 건축가 부부가 만든 뉴욕 브루클린 기반의 니치 향수. \"향수는 보이지 않는 사운드트랙\"이라는 철학으로, 르라보를 넘어선 힙스터들의 새로운 종착지가 되었습니다.", "website": ""}, {"no": "9", "category": "Philosophy", "country": "France", "name": "불리 1803 (Buly 1803)", "headline": "19th Century Beauty Secret", "definition": "시간을 거스르는 뷰티 헤리티지", "description": "19세기 프랑스 약국을 복각하여 압도적인 비주얼과 스토리를 제공합니다. 플라스틱 없는 패키징은 소장 욕구를 자극합니다.", "website": ""}, {"no": "10", "category": "Philosophy", "country": "France", "name": "아스티에 드 빌라트", "headline": "Parisian Imperfection", "definition": "파리의 낭만을 빚은 백색의 도기", "description": "19세기 방식으로 만든 가벼운 도자기는 각각 다른 모양을 가집니다. 불완전함이 주는 예술적 가치를 전합니다.", "website": ""}, {"no": "11", "category": "Philosophy", "country": "Denmark", "name": "텍라 (Tekla)", "headline": "Architectural Comfort", "definition": "기능과 심미성의 완벽한 조화", "description": "코펜하겐 기반의 홈 패브릭으로, 건축적인 컬러감과 최고급 소재를 사용해 침실과 욕실을 감각적인 공간으로 바꿉니다.", "website": ""}, {"no": "12", "category": "Philosophy", "country": "Belgium", "name": "뮬러 반 세베렌 (Muller Van Severen)", "headline": "Furniture as Sculpture", "definition": "가구와 예술의 경계를 허물다", "description": "벨기에 출신의 비주얼 아티스트 듀오가 만든 브랜드. 가구를 기능적인 도구가 아닌 '공간에 놓인 조각품'으로 해석합니다. HAY보다 과감한 컬러와 소재 사용으로 전 세계 컬렉터들의 수집 대상이 되었습니다.", "website": ""}, {"no": "13", "category": "Philosophy", "country": "Sweden", "name": "틴에이지 엔지니어링", "headline": "Tech as a Toy", "definition": "기술을 장난감처럼, 디자인 혁명", "description": "장난감 같은 디자인 속에 전문가급 기능을 담았습니다. 전 세계 크리에이터들이 사랑하는 컬트적 테크 브랜드입니다.", "website": ""}, {"no": "14", "category": "Philosophy", "country": "Germany", "name": "라이카 (Leica)", "headline": "The Eyes of History", "definition": "사진, 그 이상의 예술적 동반자", "description": "100년 넘게 사진의 역사를 함께해 온 카메라 명가입니다. 붉은색 로고는 기술력과 예술성을 동시에 상징합니다.", "website": ""}, {"no": "15", "category": "Philosophy", "country": "Switzerland", "name": "프라이탁 (Freitag)", "headline": "One and Only Recycled", "definition": "세상에 단 하나뿐인 가방", "description": "트럭 방수천을 재활용하여 모든 제품의 디자인이 다릅니다. 가치 소비 세대에게 가장 강력한 상징입니다.", "website": ""}, {"no": "16", "category": "Philosophy", "country": "France", "name": "새티스파이 (Satisfy)", "headline": "High Cult Running", "definition": "러닝 컬처의 마약 같은 감성", "description": "파리 기반 브랜드로 러닝복을 '컬처'로 해석합니다. 찢어진 듯한 빈티지 가공과 소재감은 기존 스포츠 브랜드가 흉내 낼 수 없습니다.", "website": ""}, {"no": "17", "category": "Philosophy", "country": "Italy", "name": "산타 마리아 노벨라", "headline": "800 Years of Healing", "definition": "피렌체 수도원의 치유 레시피", "description": "세계에서 가장 오래된 약국으로, 800년 헤리티지를 담았습니다. 역사와 전통이 주는 깊은 신뢰감을 판매합니다.", "website": ""}, {"no": "18", "category": "Philosophy", "country": "UK", "name": "낫싱 (Nothing)", "headline": "Pure Instinct Tech", "definition": "기술을 투명하게 드러낸 디자인 혁명", "description": "천편일률적인 테크 시장에 '투명함(Skeleton)'을 무기로 등장했습니다. 기술을 넘어 패션 아이템으로 소비되는 가장 힙한 브랜드입니다.", "website": ""}, {"no": "19", "category": "Philosophy", "country": "Japan", "name": "버미큘라 (Vermicular)", "headline": "Cast Iron Perfection", "definition": "0.01mm의 오차가 만든 미식", "description": "일본 장인 정신의 정점인 주물 냄비 브랜드입니다. 재료 본연의 맛을 극대화하는 '무수분 조리'로 미식가들의 새로운 로망이 되었습니다.", "website": ""}, {"no": "20", "category": "Philosophy", "country": "Korea", "name": "로우로우 (Rawrow)", "headline": "Essence of Things", "definition": "본질에 집중한 날것의 디자인", "description": "화려한 치장 대신 도구의 본질인 무게와 기능에 집중합니다. 트립웨어 시장에서 독보적 팬덤을 구축했습니다.", "website": ""}, {"no": "88", "category": "Philosophy", "country": "Korea", "name": "아비에무아 (Àvie Muah)", "headline": "Taste of Muse", "definition": "강민경의 감각적인 오피스 룩", "description": "다비치 강민경이 런칭한 브랜드로, 2030 여성들에게 \"가장 입고 싶은 옷\" 1순위입니다. 연예인 브랜드라는 편견을 깨고, 독보적인 원단 퀄리티와 감성적인 디자인으로 백화점에서도 모셔가는 브랜드입니다.", "website": ""}, {"no": "90", "category": "Philosophy", "country": "USA (NY)", "name": "키스 (Kith)", "headline": "King of Collaboration", "definition": "성수동에 상륙한 뉴욕의 자존심", "description": "단순한 스트릿 브랜드를 넘어, 시리얼 바와 의류를 결합한 라이프스타일 엠파이어. 성수동 매장은 아시아 패션의 랜드마크가 되었습니다.", "website": ""}, {"no": "92", "category": "Philosophy", "country": "Korea", "name": "이스턴에디션", "headline": "Aesthetics of Joseon", "definition": "조선의 미학, 현대적 가구", "description": "양태오 디자이너가 전개하는 가구 브랜드. 한국적인 선과 여백을 현대 라이프스타일에 맞게 재해석했습니다. 해외 럭셔리 호텔과 갤러리가 먼저 찾는 아트 퍼니처입니다.", "website": ""}, {"no": "94", "category": "Philosophy", "country": "Japan", "name": "금자안경 (Kaneko Optical)", "headline": "Masterpiece of Craft", "definition": "후쿠이현 장인의 혼을 담다", "description": "1958년부터 이어온 일본 안경 장인 정신의 상징. 트렌드를 좇는 젠틀몬스터와 달리, 변하지 않는 클래식과 최고의 착용감을 제공하는 하이엔드 아이웨어입니다.", "website": ""}, {"no": "95", "category": "Philosophy", "country": "Korea", "name": "쉘 코퍼레이션", "headline": "Sustainable Gorpcore", "definition": "자연을 위한 사려 깊은 아웃도어", "description": "유해 물질 없는 친환경 소재로 만드는 고프코어 브랜드. 기능성만 강조하는 아웃도어 시장에 '지속 가능성'이라는 철학을 세련된 디자인으로 풀어냈습니다.", "website": ""}, {"no": "113", "category": "Philosophy", "country": "Japan", "name": "다이와 피어39 (Daiwa Pier39)", "headline": "Fishing to Fashion", "definition": "낚시복을 패션으로 바꾼 기적", "description": "세계 1위 낚시구 브랜드 다이와가 만든 패션 라인. \"도시와 자연을 잇는 가교\"라는 컨셉으로, 펑퍼짐한 핏의 '시티보이 룩'을 완성시킨 장본인입니다. 일본 가면 무조건 사오는 브랜드 1순위입니다.", "website": ""}, {"no": "115", "category": "Philosophy", "country": "Sweden", "name": "토템 (Totême)", "headline": "Scandi Chic Standard", "definition": "더 로우의 합리적 대안", "description": "스웨덴의 시크함을 대표하는 브랜드. 군더더기 없는 디자인과 스카프 자켓 등 시그니처 아이템으로 한국 3040 여성들의 '워너비 럭셔리'로 확실히 자리 잡았습니다.", "website": ""}, {"no": "121", "category": "Philosophy", "country": "USA (NY)", "name": "슈프림 (Supreme)", "headline": "The Red Box Logo", "definition": "도산공원을 점령한 스트릿의 신", "description": "스트릿웨어의 영원한 상징. 한국 직진출(도산공원) 자체가 거대한 뉴스였으며, 여전히 대체 불가능한 쿨함의 상징입니다.", "website": ""}, {"no": "124", "category": "Philosophy", "country": "France (Paris)", "name": "르메르 (Lemaire)", "headline": "Poetic Routine", "definition": "한남동의 미학, 일상의 시(詩)", "description": "\"옷을 위한 옷\"을 만드는 크리스토프 르메르의 브랜드. 한남동 플래그십 스토어는 특유의 차분한 톤으로 한국인들의 '최애' 브랜드가 되었습니다.", "website": ""}, {"no": "129", "category": "Philosophy", "country": "USA (NY)", "name": "카이트 (Khaite)", "headline": "The New American Classic", "definition": "뉴욕의 낭만, 관능적인 미니멀리즘", "description": "\"로고 없는 럭셔리\"의 정점. 캐시미어 카디건과 구조적인 넥 라인으로 전 세계 여성들의 워너비가 된 브랜드입니다. 유행을 타지 않는 우아함으로 M몰의 격을 높입니다.", "website": ""}, {"no": "131", "category": "Philosophy", "country": "Japan", "name": "비즈빔 (Visvim)", "headline": "Future Vintage", "definition": "미래에서 온 빈티지, 궁극의 럭셔리", "description": "디렉터 나카무라 히로키가 전 세계 희귀 원단과 염색 기법을 찾아 만드는 브랜드. \"신발 한 켤레에 100만 원\"이 넘지만 BTS RM 등 전 세계 셀럽이 열광하는 장인정신의 결정체입니다.", "website": ""}, {"no": "133", "category": "Philosophy", "country": "Japan", "name": "더블탭스 (WTAPS)", "headline": "Mill-Spec Daily Wear", "definition": "도시를 위한 완벽한 밀리터리 스펙", "description": "\"모든 것을 있어야 할 곳에 둔다\"는 철학으로 밀리터리 룩을 현대적으로 재해석합니다. '시티보이' 룩의 원류이자, 뉴발란스 협업 등으로 여전히 리셀 시장을 뜨겁게 달구는 브랜드입니다.", "website": ""}, {"no": "142", "category": "Philosophy", "country": "Japan", "name": "꼼 데 가르송 (Comme des Garçons)", "headline": "Anti-Fashion", "definition": "패션을 거부하는 패션의 신", "description": "레이 가와쿠보가 창시한 전위적인 패션의 상징. 단순한 옷을 넘어 예술과 철학을 파는 그룹으로, 브랜드 자체가 하나의 거대한 종교와 같습니다.", "website": ""}, {"no": "144", "category": "Philosophy", "country": "Japan", "name": "이세이 미야케 (Issey Miyake)", "headline": "Architecture of Cloth", "definition": "옷을 위한 건축학, 플리츠의 미학", "description": "\"원단 한 장으로 옷을 만든다\"는 철학 아래 탄생한 주름(Pleats) 디자인은 기술이자 예술입니다. 스티브 잡스의 터틀넥을 만든 브랜드로도 유명합니다.", "website": ""}, {"no": "145", "category": "Philosophy", "country": "Japan", "name": "휴먼 메이드 (Human Made)", "headline": "Gear for Futuristic Teenagers", "definition": "Nigo가 만든 키치한 아메카지", "description": "J-Pop과 스트릿 컬처의 대부 니고(Nigo)가 전개하는 브랜드. 빈티지한 아메리칸 캐주얼에 귀여운 그래픽을 더해 전 세계 MZ세대를 사로잡았습니다.", "website": ""}, {"no": "151", "category": "Philosophy", "country": "France", "name": "사마야 (Samaya)", "headline": "The Pink Alpine", "definition": "텐트계의 에르메스, 핑크의 반란", "description": "프랑스 샤모니에서 탄생한 초경량 하이엔드 텐트. 압도적인 기술력과 시그니처 핑크 컬러로 '장비병' 끝판왕들의 위시리스트 1순위입니다.", "website": ""}, {"no": "152", "category": "Philosophy", "country": "Canada", "name": "노르다 (Norda)", "headline": "Run with Dyneema", "definition": "지구상에서 가장 강한 러닝화", "description": "철보다 15배 강한 '다이니마' 소재로 만든 캐나다 트레일 러닝화. 살로몬의 유행이 지고 난 뒤, 진짜 힙스터들이 신는 고프코어 슈즈입니다.", "website": ""}, {"no": "154", "category": "Philosophy", "country": "USA", "name": "랩 골프 (L.A.B. Golf)", "headline": "Zero Torque Putter", "definition": "물리학이 증명한 퍼팅의 기적", "description": "제로토크라는 혁신 기술로 골프 장비 시장을 흔들었습니다. 아담 스콧 등 PGA 선수들이 사용하며 성능을 입증한 공학적 럭셔리입니다.", "website": ""}, {"no": "161", "category": "Philosophy", "country": "France", "name": "마리 잔느 (Marie Jeanne)", "headline": "Scent of Grasse", "definition": "향수의 성지 그라스의 유산", "description": "(※요청하신 '메리제인'의 하이엔드 해석) 향수의 본고장 그라스의 원료 가문이 만든 니치 향수. 인위적이지 않은 자연의 향으로 향수 애호가들 사이에서 '숨겨진 보석'으로 통합니다.", "website": ""}], "visual": [{"no": "21", "category": "Visual", "country": "Korea", "name": "젠틀몬스터 (Gentle Monster)", "headline": "Weird Beauty", "definition": "기이한 아름다움의 실험", "description": "공간과 제품을 통해 끊임없이 시각적 충격을 줍니다. 안경을 넘어선 글로벌 예술 오브제 브랜드입니다.", "website": ""}, {"no": "22", "category": "Visual", "country": "Korea", "name": "탬버린즈 (Tamburins)", "headline": "Scent as Art", "definition": "향수를 시각 예술로 승화하다", "description": "감각적인 패키지와 오브제 같은 디자인으로 화장대를 갤러리로 만듭니다. 뷰티의 새로운 문법을 씁니다.", "website": ""}, {"no": "23", "category": "Visual", "country": "Korea", "name": "누데이크 (Nudake)", "headline": "Fashion on the Plate", "definition": "패션 같은 디저트", "description": "먹기 아까울 정도의 시각적 충격을 주는 디저트를 선보입니다. 미식 경험을 시각 예술로 확장했습니다.", "website": ""}, {"no": "24", "category": "Visual", "country": "Korea", "name": "떠그클럽 (Thug Club)", "headline": "Luxury Subculture", "definition": "하이엔드로 올라선 서브컬처", "description": "반항적인 감성을 하이엔드 퀄리티로 풀어내 전 세계 래퍼들이 열광합니다. 가장 핫하고 거친 비주얼을 자랑합니다.", "website": ""}, {"no": "25", "category": "Visual", "country": "Korea", "name": "쿠시코크 (Kusikohc)", "headline": "Photographer's Eye", "definition": "사진작가의 시선이 담긴 옷", "description": "강렬한 그래픽과 실험적인 디테일이 특징입니다. 사진작가가 디렉팅하여 비주얼적인 완성도가 매우 높습니다.", "website": ""}, {"no": "26", "category": "Visual", "country": "Korea", "name": "본봄 (Bonbom)", "headline": "Futuristic Silhouette", "definition": "K-팝 아이돌 의상의 중심", "description": "퓨처리스틱하고 과감한 컷아웃, 구조적인 실루엣으로 무대와 일상의 경계를 허무는 디자인을 선보입니다.", "website": ""}, {"no": "27", "category": "Visual", "country": "Korea", "name": "오픈 와이와이 (Open Yy)", "headline": "Cool Girl Vibe", "definition": "자유분방한 MZ세대의 워너비", "description": "쿨하고 빈티지한 무드를 현대적으로 재해석했습니다. 정형화되지 않은 스타일링으로 여성들의 지지를 받습니다.", "website": ""}, {"no": "28", "category": "Visual", "country": "Korea", "name": "더 뮤지엄 비지터", "headline": "Wearable Art", "definition": "옷을 캔버스 삼은 예술", "description": "디자이너가 직접 옷에 그림을 그리고 스프레이를 뿌립니다. 패션과 현대 미술의 경계에 있는 브랜드입니다.", "website": ""}, {"no": "29", "category": "Visual", "country": "Japan", "name": "아라이 (Arai)", "headline": "The Helmet Master", "definition": "바이커들의 영원한 신분증", "description": "단순한 안전 장비를 넘어선, 장인 정신의 결정체. 네이버후드, 슈프림 등과 협업하며 서브컬처의 아이콘이 된 헬멧 브랜드입니다. CEO의 매니악한 취향을 대변하는 상징적인 아이템입니다.", "website": ""}, {"no": "30", "category": "Visual", "country": "Korea", "name": "서저리 (Surgery)", "headline": "Reborn Vintage", "definition": "헌 옷을 해체하고 수술하다", "description": "빈티지 의류를 해체하고 재조립하는 '수술' 컨셉으로 세상에 하나뿐인 비주얼을 만들어냅니다.", "website": ""}, {"no": "31", "category": "Visual", "country": "Korea", "name": "그레일즈 (Grailz)", "headline": "Futuristic Street", "definition": "미래지향적 스트릿 웨어", "description": "마니아층이 탄탄한 퓨처리스틱 디자인을 선보입니다. 독특한 절개 라인과 소재감이 시선을 끕니다.", "website": ""}, {"no": "32", "category": "Visual", "country": "Korea", "name": "오조스 (Ojos)", "headline": "Decayed Tech", "definition": "낡음과 기술의 공존", "description": "빛바랜 듯한 색감에 기능성 디테일을 더한 독보적인 무드입니다. 오묘하고 신비로운 비주얼을 선사합니다.", "website": ""}, {"no": "33", "category": "Visual", "country": "Korea", "name": "나체 (Nache)", "headline": "Bold Body Contour", "definition": "과감한 바디 실루엣의 강조", "description": "몸의 곡선을 드러내는 과감한 컷아웃과 디자인으로 가장 핫한 여성 디자이너 브랜드 중 하나입니다.", "website": ""}, {"no": "34", "category": "Visual", "country": "Korea", "name": "2000아카이브", "headline": "Modern Y2K", "definition": "가장 힙하게 해석한 세기말 감성", "description": "Y2K 패션을 촌스럽지 않고 가장 세련되게 재해석했습니다. 아이돌과 인플루언서들의 필수 아이템입니다.", "website": ""}, {"no": "35", "category": "Visual", "country": "Korea", "name": "글로니 (Glowny)", "headline": "LA Vintage Mood", "definition": "빈티지하고 러블리한 감성", "description": "LA의 자유로운 무드와 빈티지한 감성을 담았습니다. 소녀적이면서도 힙한 비주얼로 급부상했습니다.", "website": ""}, {"no": "36", "category": "Visual", "country": "Korea", "name": "제이킴 (J.Kim)", "headline": "Oriental Fantasy", "definition": "고려인의 뿌리, 현대적 미학", "description": "우즈베키스탄 고려인 3세 디자이너가 만든 독보적 브랜드. 한국의 단청과 조각보를 연상시키는 컷아웃 디테일로 전 세계 패션계에 신선한 충격을 주었습니다.", "website": ""}, {"no": "37", "category": "Visual", "country": "Korea", "name": "오소이 (Osoi)", "headline": "Structural Chic", "definition": "독창적인 하드웨어와 구조", "description": "자체 개발한 하드웨어 장식과 건축적인 쉐입이 특징입니다. 모던하면서도 유니크한 미감을 보여줍니다.", "website": ""}, {"no": "38", "category": "Visual", "country": "Korea", "name": "이에이에 (Yie Yie)", "headline": "Unique Heels", "definition": "발끝에서 완성되는 유니크", "description": "독특한 굽 디자인과 과감한 컬러 매치가 돋보입니다. 슈즈 하나로 전체 룩의 포인트를 완성합니다.", "website": ""}, {"no": "91", "category": "Visual", "country": "USA/Israel", "name": "어반 소피스티케이션", "headline": "Puffer on Phone", "definition": "거울 셀카를 위한 최고의 액세서리", "description": "패딩 점퍼를 입힌 듯한 '푸퍼 케이스'로 글로벌 히트를 친 브랜드. 단순한 폰 케이스가 아니라, Gen Z의 정체성을 보여주는 패션 아이템입니다.", "website": ""}, {"no": "112", "category": "Visual", "country": "Italy (Milan)", "name": "써네이 (Sunnei)", "headline": "Italian Wit", "definition": "밀라노 패션의 유쾌한 반란", "description": "굵은 스트라이프 티셔츠와 고무 소재 귀걸이 등 컬러풀하고 위트 있는 디자인으로 밀라노 패션의 엄숙함을 깼습니다.", "website": ""}, {"no": "116", "category": "Visual", "country": "Japan", "name": "메종 미하라 야스히로", "headline": "Melting Sole", "definition": "녹아내린 신발, 지드래곤의 픽", "description": "컨버스나 반스 같은 익숙한 신발의 밑창이 녹아내린 듯한 디자인이 특징입니다. 지드래곤 등 전 세계 셀럽들이 착용하며 '못생겼는데 예쁜' 신발 트렌드를 만들었습니다.", "website": ""}, {"no": "120", "category": "Visual", "country": "China/Global", "name": "팀 왕 디자인 (TEAM WANG design)", "headline": "Global Performer", "definition": "잭슨의 글로벌 럭셔리 스트릿", "description": "갓세븐 잭슨이 디렉팅하는 글로벌 브랜드. 미니멀하지만 강렬한 블랙 컨셉으로 전 세계 백화점에서 팝업을 엽니다. 아티스트의 글로벌 인맥과 감각이 돋보이는 럭셔리 스트릿 웨어입니다.", "website": ""}, {"no": "125", "category": "Visual", "country": "France (Paris)", "name": "꾸레쥬 (Courrèges)", "headline": "Future is Back", "definition": "제니가 사랑한 스페이스 에이지", "description": "60년대 퓨처려즘을 현대적인 Y2K 감성으로 부활시켰습니다. 작은 로고의 니트와 바이닐 소재 자켓은 MZ세대 명품 입문 1순위입니다.", "website": ""}, {"no": "126", "category": "Visual", "country": "France (Paris)", "name": "자크뮈스 (Jacquemus)", "headline": "Surreal Pop Art", "definition": "팝한 컬러와 초현실적인 비율", "description": "거대한 밀짚모자와 아주 작은 가방(치키토). SNS 시대에 가장 적합한 비주얼 쇼크를 주는 브랜드로, 팝업 스토어마다 대기 행렬을 만듭니다.", "website": ""}, {"no": "134", "category": "Visual", "country": "Japan", "name": "언더커버 (Undercover)", "headline": "Punk Meets Couture", "definition": "펑크 정신을 입은 하이엔드 예술", "description": "디자이너 준 다카하시가 이끄는 브랜드로, \"옷이 아니라 소음(Noise)을 만든다\"는 슬로건처럼 전위적이고 예술적입니다. 나이키(Gyakusou)와의 협업부터 파리 컬렉션까지 아우르는 일본 패션의 자존심입니다.", "website": ""}, {"no": "155", "category": "Visual", "country": "UK", "name": "플레이 포에버 (Playforever)", "headline": "Art Toys for Dad", "definition": "아빠와 아들을 위한 드림카", "description": "1960년대 경주용 자동차를 재해석한 영국 아트 토이. 장난감을 넘어선 오브제로, 자동차를 사랑하는 CEO의 서재에 완벽하게 어울립니다.", "website": ""}, {"no": "158", "category": "Visual", "country": "Russia/Global", "name": "테디테일즈 (Teddy Tales)", "headline": "Handmade Soulmate", "definition": "어른을 위한 수제 테디베어", "description": "러시아 작가가 디자인한 핸드메이드 곰 인형. 정교한 관절과 사랑스러운 표정으로 키덜트족의 소장 욕구를 자극하는 프리미엄 아트 토이입니다.", "website": ""}], "scarcity": [{"no": "39", "category": "Scarcity", "country": "Korea", "name": "산산기어 (San San Gear)", "headline": "Core of Gorpcore", "definition": "고프코어 룩의 핵심", "description": "기능성과 일상복의 경계에 있는 테크웨어로, 높은 희소성과 강력한 팬덤을 보유하고 있습니다.", "website": ""}, {"no": "40", "category": "Scarcity", "country": "Korea", "name": "케일 (Cayl)", "headline": "Local Outdoor Spirit", "definition": "클라이밍 기반의 진정성", "description": "한국의 산과 클라이밍 문화를 기반으로 성장한 로컬 아웃도어입니다. 진정성 있는 디자인이 매력입니다.", "website": ""}, {"no": "41", "category": "Scarcity", "country": "Korea", "name": "언더마이카 (Undermycar)", "headline": "Drop System Fandom", "definition": "없어서 못 사는 테크 웨어", "description": "기습적인 드롭(Drop) 판매 방식으로 팬덤을 열광시킵니다. 희소성이 브랜드 가치의 핵심입니다.", "website": ""}, {"no": "42", "category": "Scarcity", "country": "Korea", "name": "폴리테루 (Polyteru)", "headline": "Relaxed High-End", "definition": "웨이팅 필수, 감도 높은 남성복", "description": "편안하지만 섬세한 디테일로 발매 즉시 품절되는 브랜드입니다. 남성들의 절대적인 지지를 받습니다.", "website": ""}, {"no": "43", "category": "Scarcity", "country": "Korea", "name": "해칭룸 (Hatching Room)", "headline": "Genderless Contemporary", "definition": "젠더리스 실루엣의 미학", "description": "남녀 구분 없는 유려한 실루엣과 감각적인 디테일이 특징입니다. 차분하지만 확실한 존재감을 가집니다.", "website": ""}, {"no": "44", "category": "Scarcity", "country": "Korea", "name": "아트 이프 액츠", "headline": "Artistic Inspiration", "definition": "예술적 영감을 옷으로 풀다", "description": "차분한 무드 속에 예술적 디테일을 숨겨놓았습니다. 오래 입을수록 가치를 발견하게 되는 옷입니다.", "website": ""}, {"no": "45", "category": "Scarcity", "country": "Korea", "name": "브라운야드 (Brownyard)", "headline": "Utility & Stability", "definition": "단단하고 실용적인 워크웨어", "description": "유행을 타지 않는 단단한 디자인과 실용성을 갖췄습니다. 기본에 충실한 옷의 힘을 보여줍니다.", "website": ""}, {"no": "46", "category": "Scarcity", "country": "Korea", "name": "포터리 (Pottery)", "headline": "New Business Casual", "definition": "비즈니스 캐주얼의 새로운 기준", "description": "좋은 도자기'처럼 본질에 충실합니다. 현대 직장인 남성들에게 가장 완벽한 유니폼을 제안합니다.", "website": ""}, {"no": "47", "category": "Scarcity", "country": "Korea", "name": "헤리티지 플로스", "headline": "Future Vintage", "definition": "미래의 빈티지를 만들다", "description": "최고의 원단과 실을 직접 개발하여 사용합니다. 시간이 지날수록 멋어러워지는 옷을 만듭니다.", "website": ""}, {"no": "48", "category": "Scarcity", "country": "Korea", "name": "이스트로그 (Eastlogue)", "headline": "Modern Military", "definition": "밀리터리의 현대적 아카이브", "description": "밀리터리와 헌팅 웨어를 복각하고 재해석하여 독보적인 아카이브를 구축했습니다.", "website": ""}, {"no": "49", "category": "Scarcity", "country": "Korea", "name": "유스 (Youth)", "headline": "Minimal & Destructive", "definition": "미니멀 속에 숨겨진 파격", "description": "겉보기엔 미니멀하지만 자세히 보면 파괴적인 디테일이 숨어 있는 쿨한 감성의 브랜드입니다.", "website": ""}, {"no": "50", "category": "Scarcity", "country": "Korea", "name": "어나더오피스", "headline": "Work-Life Balance", "definition": "일과 삶을 위한 지적 데일리웨어", "description": "편안하면서도 지적인 무드를 연출합니다. 일상과 오피스를 오가는 유연한 라이프스타일을 대변합니다.", "website": ""}, {"no": "51", "category": "Scarcity", "country": "Korea", "name": "나띵리튼 (Nothing Written)", "headline": "Effortless Chic", "definition": "꾸미지 않은 듯한 자연스러움", "description": "과하지 않은 디자인과 좋은 소재로 여성들의 데일리 럭셔리로 자리 잡았습니다.", "website": ""}, {"no": "52", "category": "Scarcity", "country": "Korea", "name": "시엔느 (Sienne)", "headline": "French Vibe", "definition": "서울에서 만나는 프렌치 무드", "description": "감각적인 컬러 팔레트와 빈티지한 무드로 두터운 여성 팬덤을 보유하고 있습니다.", "website": ""}, {"no": "53", "category": "Scarcity", "country": "Korea", "name": "렉토 (Recto)", "headline": "Structured Beauty", "definition": "중성적이고 구조적인 실루엣", "description": "직선과 곡선의 조화를 통해 중성적인 아름다움을 표현합니다. 디자이너 브랜드의 정석과도 같습니다.", "website": ""}, {"no": "54", "category": "Scarcity", "country": "Korea", "name": "로우 클래식 (Low Classic)", "headline": "Seoul Minimalism", "definition": "서울 여성을 대변하는 미니멀리즘", "description": "세련되고 절제된 디자인으로 K-패션의 위상을 높인 1세대 디자이너 브랜드입니다.", "website": ""}, {"no": "55", "category": "Scarcity", "country": "Korea", "name": "아모멘토 (Amomento)", "headline": "Understated Attitude", "definition": "절제된 디자인과 태도", "description": "편집숍 기반으로 시작하여, 과장 없는 디자인과 특유의 차분한 감성을 전합니다.", "website": ""}, {"no": "56", "category": "Scarcity", "country": "Korea", "name": "민주킴 (Minjukim)", "headline": "Fairy Tale Couture", "definition": "동화적이고 예술적인 쿠튀르", "description": "넷플릭스 우승 디자이너로, 독창적인 프린팅과 볼륨감 있는 실루엣이 특징입니다.", "website": ""}, {"no": "57", "category": "Scarcity", "country": "Korea", "name": "쿠오카 (Kuoca)", "headline": "Fine Dining Skincare", "definition": "파인 다이닝 철학의 스킨케어", "description": "주문 후 제조하는 신선함과 최고급 원료로 스킨케어에 미식의 철학을 도입했습니다.", "website": ""}, {"no": "58", "category": "Scarcity", "country": "France", "name": "엑스 니힐로 (Ex Nihilo)", "headline": "Avant-Garde Scent", "definition": "파리 방돔 광장의 벤처 향수", "description": "\"무(無)에서 유(有)를 창조한다\"는 뜻의 럭셔리 니치 향수. 뻔한 향수 대신, 나만의 향을 레이어링(Osmologue)하는 경험을 제공하며 향수 덕후들의 종착지로 불립니다.", "website": ""}, {"no": "86", "category": "Scarcity", "country": "Korea", "name": "피스마이너스원 (PEACEMINUSONE)", "headline": "The King of K-Pop", "definition": "지드래곤(GD)의 세계관 그 자체", "description": "말이 필요 없는 브랜드. 나이키와 협업할 수 있는 유일무이한 국내 브랜드이자, 전 세계 패션 씬에서 가장 강력한 영향력을 가집니다. 단순한 의류가 아니라 '현대 미술'과도 같은 희소성을 자랑합니다.", "website": ""}, {"no": "114", "category": "Scarcity", "country": "Sweden", "name": "아워 레가시 (Our Legacy)", "headline": "Cult Fabric Master", "definition": "패피들이 가장 사랑하는 옷", "description": "현재 패션 씬에서 \"가장 쿨한 브랜드\" 하나만 꼽으라면 단연코 아워 레가시입니다. 독특한 소재감과 빈티지한 워싱은 그 누구도 흉내 낼 수 없습니다. 스투시와의 협업으로 주가가 천정부지로 솟았습니다.", "website": ""}, {"no": "117", "category": "Scarcity", "country": "Italy", "name": "로아 하이킹 (ROA Hiking)", "headline": "Luxury Gorpcore", "definition": "등산화가 명품을 만났을 때", "description": "이탈리아의 장인 정신과 하이킹 부츠가 결합했습니다. 투박한 등산화가 아니라, 슬랙스에 신어도 어울리는 가장 섹시한 고프코어 슈즈입니다.", "website": ""}, {"no": "119", "category": "Scarcity", "country": "Japan", "name": "엔노이 (Ennoy)", "headline": "The Ghost Brand", "definition": "돈 있어도 못 사는 도쿄의 유령", "description": "매장도 없고, 인스타로만 기습 발매하는 도쿄의 '비밀 결사대' 같은 브랜드. \"The Professional\"이라는 문구 하나로 일본 힙스터들을 줄 세웁니다. 희소성 끝판왕입니다.", "website": ""}, {"no": "122", "category": "Scarcity", "country": "USA (NY)", "name": "에임 레온 도르 (Aimé Leon Dore)", "headline": "New American Classic", "definition": "뉴욕의 낭만, 뉴발란스의 구원자", "description": "디렉터 테디 산티스가 이끄는 '뉴 프레피 룩'의 정점. 뉴발란스와의 협업으로 전 세계 리셀 시장을 뒤흔든 가장 우아한 스트릿 브랜드입니다.", "website": ""}, {"no": "123", "category": "Scarcity", "country": "USA (NY)", "name": "더 로우 (The Row)", "headline": "Quiet Luxury Summit", "definition": "로고 없이 압도하는 올드머니 룩", "description": "올슨 자매가 만든 '조용한 럭셔리'의 끝판왕. 제니 등 셀럽들이 로고 없는 가방을 들며 한국에서도 '부의 상징'으로 통합니다.", "website": ""}, {"no": "127", "category": "Scarcity", "country": "UK (London)", "name": "키코 코스타디노브 (Kiko Kostadinov)", "headline": "Tech-Fashion Genius", "definition": "아식스를 부활시킨 천재", "description": "패턴 커팅의 천재라 불리며, 아식스와의 협업으로 전 세계 스니커즈 씬을 평정했습니다. 한국 테크웨어/고프코어 트렌드의 핵심입니다.", "website": ""}, {"no": "128", "category": "Scarcity", "country": "UK (London)", "name": "마틴 로즈 (Martine Rose)", "headline": "Distorted Normality", "definition": "뒤틀린 클래식, 런던의 반항아", "description": "평범한 남성복을 기묘하게 비틀어(Distort) 쿨함을 만듭니다. 나이키 샥스 협업 등 남들과 다른 '한 끗'을 찾는 힙스터들의 원픽입니다.", "website": ""}, {"no": "130", "category": "Scarcity", "country": "Japan", "name": "C.E (Cav Empt)", "headline": "Legend of Graphic", "definition": "스트릿의 전설이 만든 그래픽", "description": "베이프(BAPE)의 그래픽을 담당했던 전설적인 디자이너가 만든 브랜드. 독특한 미래주의적 그래픽과 실루엣으로 마니아층의 절대적인 지지를 받습니다.", "website": ""}, {"no": "146", "category": "Scarcity", "country": "Japan", "name": "오라리 (Auralee)", "headline": "Material Obsession", "definition": "소재에 집착하는 지독한 순수주의", "description": "\"소재가 디자인이다\"라는 신념으로 전 세계 최고급 원료를 직접 수급해 만듭니다. 겉보기엔 평범해 보이나 만져보는 순간 구매하게 되는 마성의 브랜드입니다.", "website": ""}, {"no": "147", "category": "Scarcity", "country": "Japan", "name": "캐피탈 (Kapital)", "headline": "Denim Artisan", "definition": "일본 데님과 보로(Boro)의 예술", "description": "일본 오카야마의 데님 장인 기술에 히피 문화를 결합했습니다. 기워 입은 듯한 보로(Boro) 디테일과 스마일 로고는 캐피탈만의 확실한 아이덴티티입니다.", "website": ""}, {"no": "148", "category": "Scarcity", "country": "Japan", "name": "핸더 스킴 (Hender Scheme)", "headline": "Homage to Leather", "definition": "가죽으로 빚어낸 오마주", "description": "나이키, 아디다스 등의 아이코닉한 스니커즈를 오직 베지터블 가죽으로만 재현(오마주)합니다. 시간이 지날수록 태닝되며 나만의 신발로 완성됩니다.", "website": ""}, {"no": "149", "category": "Scarcity", "country": "Japan", "name": "앤드 원더 (And Wander)", "headline": "Fashion in Nature", "definition": "이세이 미야케 출신이 만든 아웃도어", "description": "기능성 아웃도어 의류에 하이패션의 감성을 완벽하게 이식했습니다. 산에서도 도시에서도 가장 세련된 고프코어 룩을 완성합니다.", "website": ""}, {"no": "167", "category": "Scarcity", "country": "USA", "name": "미스테리 랜치 (Mystery Ranch)", "headline": "Built for the Mission", "definition": "미군이 선택한 배낭의 전설", "description": "\"어떤 임무에서도 살아남는다\"는 내구성을 자랑하는 백팩 브랜드. 밀리터리 마니아와 백패커들에게 '졸업템'으로 불리는 장비입니다.", "website": ""}], "narrative": [{"no": "59", "category": "Narrative", "country": "Korea", "name": "모노하 (Monoha)", "headline": "Aesthetics of Emptiness", "definition": "여백과 비움의 미학", "description": "전시, 의류, 카페를 통해 한국적인 여백의 미를 경험하게 하는 복합 문화 공간입니다.", "website": ""}, {"no": "60", "category": "Narrative", "country": "Korea", "name": "챕터원 (Chapter 1)", "headline": "Craftsmanship Living", "definition": "한국적 리빙 트렌드의 제안", "description": "국내외 공예 작가와 가구를 소개하며, 공간에 취향과 이야기를 불어넣습니다.", "website": ""}, {"no": "61", "category": "Narrative", "country": "Korea", "name": "텍스쳐 (Txture)", "headline": "Vintage Texture", "definition": "질감을 통해 전하는 따뜻함", "description": "가구와 오브제의 질감(Texture)에 집중하여 빈티지하고 따뜻한 라이프스타일을 제안합니다.", "website": ""}, {"no": "62", "category": "Narrative", "country": "Korea", "name": "오이뮤 (Oimyu)", "headline": "Modern Tradition", "definition": "잊혀진 과거의 현대적 부활", "description": "향, 성냥 등 잊혀져 가는 과거의 물건을 현대적 디자인으로 되살려 세대 간을 연결합니다.", "website": ""}, {"no": "63", "category": "Narrative", "country": "Korea", "name": "콜린스 (Collins)", "headline": "Personal Moments", "definition": "지극히 개인적인 순간을 위하여", "description": "인센스를 통해 혼자만의 사색하는 시간을 제안합니다. 감성적인 스토리텔링이 강점입니다.", "website": ""}, {"no": "64", "category": "Narrative", "country": "Korea", "name": "피치스 (Peaches)", "headline": "Street Car Culture", "definition": "자동차 문화를 스트릿 패션으로", "description": "자동차 튜닝 문화를 기반으로 패션, 영상, F&B를 아우르는 강력한 팬덤 브랜드입니다.", "website": ""}, {"no": "65", "category": "Narrative", "country": "Korea", "name": "아더에러 (ADER Error)", "headline": "Beauty of Error", "definition": "오류에서 발견한 창조", "description": "오류'를 테마로 패션과 전시를 결합했습니다. 매장 자체가 하나의 갤러리인 크리에이티브 그룹입니다.", "website": ""}, {"no": "66", "category": "Narrative", "country": "Korea", "name": "마뗑킴 (Matin Kim)", "headline": "Communication Power", "definition": "소통이 만든 팬덤 브랜드", "description": "디렉터의 솔직한 SNS 소통이 브랜드의 핵심 경쟁력이 되어, 강력한 충성 고객을 만들었습니다.", "website": ""}, {"no": "67", "category": "Narrative", "country": "Korea", "name": "기준 (Kijun)", "headline": "Seoul Cool Energy", "definition": "80년대 서울의 쿨한 재해석", "description": "80-90년대 서울의 미감을 현대적이고 위트 있게 재해석합니다. 촌스러움과 세련됨을 오가는 '코리안 쿨'입니다.", "website": ""}, {"no": "68", "category": "Narrative", "country": "Korea", "name": "튀위드 (Tuewid)", "headline": "Grunge Leather Mood", "definition": "성수동의 빈티지 그런지 감성", "description": "특유의 빈티지한 가죽 질감과 그런지한 무드가 압권입니다. 반짝 유행이 아니라 브랜드 고유의 깊은 무드를 팝니다.", "website": ""}, {"no": "69", "category": "Narrative", "country": "Korea", "name": "아티스트 베이커리", "headline": "Bread as Art", "definition": "빵을 예술로 대하는 태도", "description": "런던 베이글 뮤지엄 팀의 차기작으로, 소금빵을 다양한 예술적 토핑으로 풀어냅니다.", "website": ""}, {"no": "71", "category": "Narrative", "country": "Japan", "name": "테크닉스 (Technics)", "headline": "Legend of Sound", "definition": "턴테이블의 살아있는 전설", "description": "DJ 문화의 상징이자 오디오 애호가들의 로망. 아날로그 사운드의 부활과 함께, 공간의 품격을 높이는 가장 완벽한 인테리어 오브제로 다시 주목받고 있습니다.", "website": ""}, {"no": "87", "category": "Narrative", "country": "Korea", "name": "NOS7 (엔오에스세븐)", "headline": "Nothing, Ordinary Sunday", "definition": "손흥민의 편안한 일주일", "description": "월드클래스 축구선수 손흥민의 브랜드. 거창한 스포츠 웨어가 아닌, 그가 경기장 밖에서 즐기는 편안한 휴식과 일상을 담았습니다. \"손흥민이 입는 옷\"이라는 서사만으로도 강력한 팬덤을 이끕니다.", "website": ""}, {"no": "89", "category": "Narrative", "country": "Morocco", "name": "바샤 커피 (Bacha Coffee)", "headline": "Coffee of Hermes", "definition": "모로코에서 온 커피계의 에르메스", "description": "100% 아라비카 원두와 화려한 틴케이스, 압도적인 매장 경험으로 '선물하기' 시장을 평정했습니다. 단순한 커피가 아니라 '럭셔리한 경험'을 선물하는 브랜드입니다.", "website": ""}, {"no": "93", "category": "Narrative", "country": "Greece", "name": "이야이야앤프렌즈", "headline": "Wit in Grocery", "definition": "세상에서 가장 귀여운 올리브 오일", "description": "그리스 최상급 올리브 오일을 위트 있는 캐릭터 패키지에 담았습니다. \"오일도 이렇게 힙할 수 있다\"는 것을 보여주며, 센스 있는 기프트 아이템으로 각광받습니다.", "website": ""}, {"no": "118", "category": "Narrative", "country": "USA", "name": "스포티 앤 리치 (Sporty & Rich)", "headline": "Wellness Aesthetic", "definition": "성공한 사람들의 휴일 룩", "description": "\"건강하고, 부유하고, 예쁘게.\" 8090년대 부자들의 테니스 클럽, 헬스 클럽 룩을 표방합니다. 단순한 옷이 아니라 '웰니스 라이프스타일'을 파는 브랜드로 여성들에게 인기 폭발입니다.", "website": ""}, {"no": "132", "category": "Narrative", "country": "Japan", "name": "니들스 (Needles)", "headline": "Butterfly Effect", "definition": "트랙 팬츠 하나로 세계를 제패", "description": "나비 로고가 새겨진 트랙 팬츠(츄리닝)를 하이엔드 패션으로 격상시켰습니다. 아메리칸 빈티지와 일본의 섬세함을 섞은 네펜데스 산하의 핵심 브랜드입니다.", "website": ""}, {"no": "135", "category": "Narrative", "country": "Japan", "name": "네이버후드 (Neighborhood)", "headline": "Cult of Incense", "definition": "연기가 피어오르는 수집의 미학", "description": "하라주쿠 스트릿의 대부이자 바이커 컬처의 상징. 의류뿐 아니라 독창적인 디자인의 '인센스 챔버(향로)'와 식물 라인(SRL)은 전 세계 수집가들이 탐내는 최고의 리빙 오브제입니다.", "website": ""}, {"no": "150", "category": "Narrative", "country": "Japan", "name": "포터 클래식 (Porter Classic)", "headline": "Sashiko Standard", "definition": "가방 장인 가문의 새로운 유산", "description": "요시다 포터' 가문의 일원이 독립해 만든 브랜드. 일본 전통 자수 기법인 사시코(Sashiko)를 적용한 의류와 가방은 입을 수 있는 예술품입니다.", "website": ""}, {"no": "153", "category": "Narrative", "country": "Korea", "name": "다이닛 (Deinet)", "headline": "Return of the Queen", "definition": "마뗑킴 신화의 새로운 챕터", "description": "2,000억 신화 마뗑킴을 만든 김다인 대표의 신규 브랜드. 대중화된 마뗑킴을 떠나, 그녀의 감각을 그리워하던 코어 팬덤이 결집한 2026년 가장 핫한 루키입니다.", "website": ""}, {"no": "156", "category": "Narrative", "country": "Netherlands", "name": "본톤토이즈 (Bon Ton Toys)", "headline": "Sustainable Cuteness", "definition": "미피(Miffy)의 지속 가능한 변신", "description": "100% 재활용 소재로 만드는 네덜란드 프리미엄 인형. 코듀로이, 데님 등 다양한 소재의 미피 인형은 키즈룸뿐 아니라 성인의 인테리어 소품으로도 인기입니다.", "website": ""}, {"no": "157", "category": "Narrative", "country": "UK", "name": "젤리캣 (Jellycat)", "headline": "The Bonding Doll", "definition": "국민 애착 인형, 런던의 감성", "description": "설명이 필요 없는 프리미엄 인형 브랜드. 백화점 오픈런을 부르는 키링과 인형들은 10대부터 30대 여성까지 폭넓은 팬덤을 보유하고 있습니다.", "website": ""}, {"no": "159", "category": "Narrative", "country": "Korea", "name": "스내피커들 (Snappy Cuddle)", "headline": "Lounge in Style", "definition": "집순이들의 럭셔리 유니폼", "description": "\"가장 편안하지만 가장 스타일리시하게.\" 셀럽들이 입는 파자마로 유명하며, 홈웨어의 격을 한 단계 높인 라운지웨어 브랜드입니다.", "website": ""}, {"no": "160", "category": "Narrative", "country": "USA", "name": "스킴스 (SKIMS)", "headline": "Body Positive Icon", "definition": "킴 카다시안의 속옷 제국", "description": "킴 카다시안이 만든 보정 속옷 및 라운지웨어. 전 세계 직구 대란을 일으키며 '속옷도 패션'이라는 새로운 트렌드를 만들었습니다.", "website": ""}, {"no": "166", "category": "Narrative", "country": "Korea", "name": "그랑핸드 (Granhand)", "headline": "Scent of Memory", "definition": "북촌의 기억을 담은 향기", "description": "수제 향수라는 독특한 감성과 마대 자루 패키지, 그리고 각인 서비스로 20대에게 가장 사랑받는 입문용 니치 향수입니다.", "website": ""}], "inspiration": [{"no": "70", "category": "Inspiration", "country": "Korea", "name": "카멜커피 (Camel Coffee)", "headline": "Coffee & Culture", "definition": "커피 그 이상의 문화 살롱", "description": "빈티지한 공간과 디렉터의 위트가 결합되어 방문 자체가 즐거운 경험이 됩니다.", "website": ""}, {"no": "72", "category": "Inspiration", "country": "Korea", "name": "모자이크 (Mosaic)", "headline": "Analog Sound", "definition": "아날로그 음악의 발견", "description": "희귀한 LP를 디깅하고 감상할 수 있는 레코드 샵이자 카페로, 아날로그 감성을 전합니다.", "website": ""}, {"no": "73", "category": "Inspiration", "country": "Korea", "name": "바 참 (Bar Cham)", "headline": "Local Spirit Cocktail", "definition": "한옥에서 즐기는 로컬 칵테일", "description": "한국 전통주를 기주로 한 창작 칵테일로 세계적인 바 랭킹에 이름을 올렸습니다.", "website": ""}, {"no": "74", "category": "Inspiration", "country": "Korea", "name": "제스트 (Zest)", "headline": "Sustainable Fine Drinking", "definition": "제로 웨이스트 미식의 실천", "description": "식재료의 껍질까지 활용하는 'Zero Waste' 철학을 바 운영에 접목한 선구자입니다.", "website": ""}, {"no": "75", "category": "Inspiration", "country": "Korea", "name": "수토메 아포테케리 (Sutome Apothecary)", "headline": "Scent of Pilgrimage", "definition": "영혼을 치유하는 향의 순례", "description": "단순한 향수가 아니라 '치유와 명상'을 위한 향을 만듭니다. 한국의 산과 들, 사찰에서 영감을 받은 깊고 그윽한 향은 CEO들에게 진정한 휴식을 선사합니다. 그랑핸드의 상위 호환 버전입니다.", "website": ""}, {"no": "76", "category": "Inspiration", "country": "UK", "name": "바이라오 (Vyrao)", "headline": "High Vibration Scent", "definition": "에너지를 정화하는 '위치(Witch)' 컬처", "description": "패션계 거물 야스민 스웰이 런칭한 브랜드. 향수 병 안에 '허키머 다이아몬드(원석)'가 들어있어, 뿌리는 순간 부정적인 에너지를 정화한다는 컨셉입니다. 2026년 웰니스 트렌드의 정점입니다.", "website": ""}, {"no": "77", "category": "Inspiration", "country": "Korea", "name": "페사드 (Pesade)", "headline": "Beauty Curator", "definition": "아름다움을 보는 새로운 시각", "description": "향수와 핸드크림을 넘어 공간과 오브제까지 아우르는 예술적인 뷰티 브랜드입니다.", "website": ""}, {"no": "78", "category": "Inspiration", "country": "Korea", "name": "본투스탠드아웃", "headline": "Rebel in Porcelain", "definition": "백자의 재해석, 관능의 반전", "description": "조선 백자를 현대적으로 재해석한 병 디자인에 관능적이고 도발적인 향을 담았습니다.", "website": ""}, {"no": "79", "category": "Inspiration", "country": "Korea", "name": "알비오더블유 (RboW)", "headline": "Art in Daily Life", "definition": "화장대 위의 작은 전시회", "description": "아트 큐레이션 플랫폼이자 뷰티 브랜드로, 예술을 일상재로 소유하게 합니다.", "website": ""}, {"no": "80", "category": "Inspiration", "country": "Korea", "name": "언베니쉬 (Unvanish)", "headline": "Men's Grooming", "definition": "사라지지 않는 남자의 가치", "description": "남성들의 라이프스타일과 그루밍을 제안하며, 잊혀지지 않는 본질적인 가치를 이야기합니다.", "website": ""}, {"no": "81", "category": "Inspiration", "country": "Korea", "name": "밍글스 (Mingles)", "headline": "Korean Fine Dining", "definition": "한식의 새로운 지평", "description": "전통 한식에 서양 조리법을 조화시켜 미슐랭 스타를 유지하는 한국 미식의 자존심입니다.", "website": ""}, {"no": "82", "category": "Inspiration", "country": "Korea", "name": "본앤브레드", "headline": "Premium Beef", "definition": "한우 오마카세의 원조", "description": "마장동에서 시작해 한우 오마카세라는 장르를 개척하고 유행시킨 프리미엄 브랜드입니다.", "website": ""}, {"no": "83", "category": "Inspiration", "country": "Korea", "name": "세이버리 (Savory)", "headline": "Social Dining Club", "definition": "미식과 소셜링의 결합 (2026 Trend)", "description": "단순한 식사를 넘어 취향이 맞는 사람들과 교류하는 하이엔드 소셜 다이닝 클럽입니다.", "website": ""}, {"no": "84", "category": "Inspiration", "country": "Korea", "name": "LCDC", "headline": "Travel & Story", "definition": "여행과 이야기를 담은 복합 공간", "description": "공간 자체가 하나의 여행지처럼 설계된 성수동의 대형 복합 문화 플랫폼입니다.", "website": ""}, {"no": "85", "category": "Inspiration", "country": "Korea", "name": "콤포트 서울 (Comfort Seoul)", "headline": "Photographer's View", "definition": "서울의 가장 감각적인 뷰파인더", "description": "톱 포토그래퍼 김희준이 만든 후암동의 복합 문화 공간. 블랙핑크 제니 등 톱 셀럽들이 사랑하는 아지트이자, 전시와 카페, 편집샵이 결합된 서울 힙스터들의 현재진행형 성지입니다.", "website": ""}, {"no": "96", "category": "Inspiration", "country": "Korea", "name": "파지티브호텔", "headline": "Wellness Lifestyle", "definition": "먹는 것까지 디자인하는 웰니스", "description": "단순한 건강식품이 아닌, '굿 웰니스(Good Wellness)' 라이프스타일을 제안합니다. 지중해식 식단과 요가, 명상을 결합하여 자기관리에 철저한 CEO들에게 어필합니다.", "website": ""}, {"no": "138", "category": "Inspiration", "country": "Japan", "name": "디앤디파트먼트 (D&Department)", "headline": "Long Life Design", "definition": "유행하지 않아도 좋은 물건", "description": "디자이너 나가오카 겐메이가 제안하는 \"오래 지속되는 디자인\". 지역의 특산품과 재활용품을 큐레이션하며 물건의 본질을 생각하게 합니다.", "website": ""}, {"no": "139", "category": "Inspiration", "country": "Japan", "name": "커피 마메야 (Koffee Mameya)", "headline": "Coffee Sommelier", "definition": "커피를 처방해주는 약국 같은 카페", "description": "간판도, 좌석도 없습니다. 오직 바리스타와 상담을 통해 전 세계 희귀 원두 중 내 취향에 맞는 커피를 '처방'받는 경험을 팝니다.", "website": ""}, {"no": "140", "category": "Inspiration", "country": "Japan", "name": "트렁크 호텔 (TRUNK Hotel)", "headline": "Socializing Hotel", "definition": "도쿄 크리에이터들의 사교장", "description": "숙박을 넘어 도쿄의 힙스터들이 모여 파티하고 교류하는 소셜라이징 호텔입니다. 지역 사회와 상생하며 가장 쿨한 도쿄의 바이브를 느낄 수 있습니다.", "website": ""}, {"no": "141", "category": "Inspiration", "country": "Japan", "name": "빔즈 재팬 (BEAMS Japan)", "headline": "Souvenir from Tokyo", "definition": "일본의 전통을 가장 힙하게 큐레이션", "description": "신주쿠에 위치한 빔즈의 프로젝트 스토어. 일본의 전통 공예품, 식료품, 기념품을 빔즈의 시선으로 위트 있게 재해석하여 소개합니다.", "website": ""}, {"no": "143", "category": "Inspiration", "country": "Japan", "name": "긴자 소니 파크 (Ginza Sony Park)", "headline": "Park in the City", "definition": "건물을 허물고 만든 도심 속 공원", "description": "소니 빌딩을 허물고 그 자리를 공원으로 개방했습니다. 끊임없이 실험적인 전시와 이벤트를 열며 '공간의 비움'이 주는 가치를 보여줍니다.", "website": ""}, {"no": "162", "category": "Inspiration", "country": "Korea", "name": "티퍼런스 (Teafference)", "headline": "Purple Tea Beauty", "definition": "보랏빛 차의 항산화 에너지", "description": "케냐의 퍼플티(Purple Tea)를 베이스로 한 프리미엄 티 & 스킨케어 브랜드. 익선동의 감각적인 플래그십 스토어와 함께 웰니스 라이프를 제안합니다.", "website": ""}, {"no": "163", "category": "Inspiration", "country": "Korea", "name": "비비앙 (BIBIANG)", "headline": "Niche Scent Fantasy", "definition": "향기로 쓰는 판타지 소설", "description": "(※요청하신 '비비앙') 독특하고 몽환적인 향조로 2030 여성들에게 '나만 알고 싶은 향수'로 불리는 니치 퍼퓸. 감각적인 보틀 디자인이 특징입니다.", "website": ""}, {"no": "164", "category": "Inspiration", "country": "Korea", "name": "플르부아 (Pleuvoir)", "headline": "Scent of Rain", "definition": "비 온 뒤의 깨끗한 살냄새", "description": "제니, 수지 등 톱 셀럽들이 애용하며 입소문 난 브랜드. 감각적인 타이포그래피 패키지와 은은한 향으로 선물하기 좋은 아이템 1순위입니다.", "website": ""}, {"no": "165", "category": "Inspiration", "country": "Korea", "name": "센녹 (Sennok)", "headline": "Bath & Ritual", "definition": "목욕을 예술로 만드는 시간", "description": "\"목욕은 영혼을 씻는 의식\"이라는 철학의 배스 & 바디 브랜드. 깨끗한 파란색 패키지와 자연스러운 향기는 욕실을 힐링 공간으로 바꿔줍니다.", "website": ""}], "select_shop": [{"no": "97", "category": "Select Shop", "country": "Italy/Korea", "name": "10 꼬르소 꼬모 (10 Corso Como)", "headline": "Slow Shopping", "definition": "세계 최초의 편집샵, 라이프스타일의 원점", "description": "\"쇼핑은 천천히 즐기는 예술이다\"라는 철학을 가진 편집샵의 시초. 패션, 디자인, 서적, 카페가 융합된 복합 문화 공간의 교과서입니다.", "website": ""}, {"no": "98", "category": "Select Shop", "country": "Korea", "name": "스컬프 스토어 (Sculp Store)", "headline": "Sharp & Avant-garde", "definition": "가장 날카로운 패션 큐레이션", "description": "남성복 기반의 테크웨어, 아방가르드, 고프코어 브랜드를 가장 심도 있게 다룹니다. 패션 고관여자들이 인정하는 독보적인 바잉 감각을 가졌습니다.", "website": ""}, {"no": "99", "category": "Select Shop", "country": "Korea", "name": "슬로우 스테디 클럽", "headline": "Daily Aesthetics", "definition": "일상 속의 미학, 시티보이의 정석", "description": "\"느리지만 꾸준하게\"라는 모토로, 변하지 않는 가치를 지닌 브랜드들을 소개합니다. 깔끔하고 정제된 라이프스타일 큐레이션이 돋보입니다.", "website": ""}, {"no": "100", "category": "Select Shop", "country": "Korea", "name": "하이츠 스토어 (Heights)", "headline": "Youth Culture Platform", "definition": "지금 서울의 젊음을 대변하는 곳", "description": "패션뿐 아니라 바이닐, 아트북, 인센스 등 유스 컬처(Youth Culture) 전반을 아우르는 힙스터들의 편의점 같은 공간입니다.", "website": ""}, {"no": "101", "category": "Select Shop", "country": "Korea", "name": "에크루 (Ecru)", "headline": "Silent Luxury", "definition": "조용한 럭셔리의 선구자", "description": "요란하지 않지만 소재와 디테일에 집착하는 일본/유럽 브랜드를 소개합니다. 드러내지 않는 멋을 아는 마니아층이 매우 두텁습니다.", "website": ""}, {"no": "102", "category": "Select Shop", "country": "UK/Korea", "name": "더 콘란샵 (The Conran Shop)", "headline": "Design Life", "definition": "영국 프리미엄 라이프스타일 큐레이션", "description": "테렌스 콘란 경이 설립한 세계적인 리빙 편집샵. 가구, 조명, 키친웨어 등 디자인이 훌륭한 삶의 도구들을 집대성했습니다.", "website": ""}, {"no": "103", "category": "Select Shop", "country": "Korea", "name": "루밍 (Rooming)", "headline": "Living Curator", "definition": "아이와 어른 모두를 위한 디자인", "description": "프리미엄 가구부터 키즈 아이템까지, 집에 놓이는 모든 물건에 디자인 가치를 부여합니다. 국내 리빙 편집샵의 1세대이자 대표주자입니다.", "website": ""}, {"no": "104", "category": "Select Shop", "country": "Korea", "name": "분더샵 (Boon the Shop)", "headline": "The Temple of Taste", "definition": "한국 하이엔드 패션의 성지", "description": "대한민국 최초이자 최고의 럭셔리 편집샵. 글로벌 명품 브랜드들이 한국 진출 시 가장 먼저 문을 두드리는, 트렌드의 최전선이자 권위입니다.", "website": ""}, {"no": "105", "category": "Select Shop", "country": "Korea", "name": "비이커 (Beaker)", "headline": "Melting Pot of Trends", "definition": "글로벌 트렌드와 서울의 가교", "description": "컨템포러리 패션과 라이프스타일을 가장 발 빠르게 소개합니다. 실험적인 브랜드와 지속 가능한 패션을 믹스하여 대중적인 힙(Hip)을 이끕니다.", "website": ""}, {"no": "106", "category": "Select Shop", "country": "Korea", "name": "레어마켓 (Rare Market)", "headline": "K-Fashion Incubator", "definition": "희소하고 독창적인 안목의 결정체", "description": "\"남들과 다른(Rare) 것이 아니면 팔지 않는다\"는 원칙 하에, 웰동 등 글로벌 라이징 브랜드와 K-패션을 인큐베이팅하는 트렌드 세터입니다.", "website": ""}, {"no": "107", "category": "Select Shop", "country": "Korea", "name": "유니페어 (Unipair)", "headline": "Gentleman's Steps", "definition": "클래식 구두의 모든 것", "description": "좋은 구두를 신고 관리하는 문화를 한국에 정착시킨 장본인. 알덴, 에드워드 그린 등 전 세계 명품 구두를 심도 있게 큐레이션합니다.", "website": ""}, {"no": "108", "category": "Select Shop", "country": "Korea", "name": "엠프티 (Empty)", "headline": "Empty but Full", "definition": "무신사가 만든 하이엔드 실험실", "description": "텅 빈 공간을 디자이너의 개성으로 채운다는 컨셉. 국내외 가장 실험적이고 핫한 디자이너 브랜드를 소개하며 시각적 충격을 줍니다.", "website": ""}, {"no": "109", "category": "Select Shop", "country": "Korea", "name": "샌프란시스코 마켓", "headline": "Heritage Archive", "definition": "이탈리안 캐주얼과 아메리칸 빈티지의 정수", "description": "남성복의 클래식과 헤리티지를 깊이 있게 다루는 샵입니다. 유행보다 '영원한 멋'을 추구하는 신사들의 놀이터입니다.", "website": ""}, {"no": "110", "category": "Select Shop", "country": "Korea", "name": "웍스아웃 (Worksout)", "headline": "Street Culture Hub", "definition": "스트릿 컬처의 거대한 움직임", "description": "칼하트 WIP를 비롯해 전 세계 스트릿 및 서브컬처 브랜드를 소개합니다. 단순 의류 판매를 넘어 아티스트 전시와 파티를 여는 문화 허브입니다.", "website": ""}, {"no": "111", "category": "Select Shop", "country": "Korea", "name": "카시나 (Kasina)", "headline": "Street Godfather", "definition": "한국 스트릿/스니커즈 씬의 대부", "description": "부산의 스케이트 샵에서 시작해 나이키가 가장 주목하는 글로벌 파트너로 성장했습니다. 한국 스트릿 문화의 역사 그 자체입니다.", "website": ""}, {"no": "136", "category": "Select Shop", "country": "Japan", "name": "다이칸야마 츠타야 (T-Site)", "headline": "Library in the Woods", "definition": "책이 아닌 라이프스타일을 파는 서점", "description": "\"취향을 설계하는 숲\"이라는 컨셉의 복합 문화 공간. 책, 음악, 영화, 커피가 유기적으로 연결되어 CEO에게 가장 큰 영감을 주는 장소입니다.", "website": ""}, {"no": "137", "category": "Select Shop", "country": "Japan", "name": "네펜데스 (Nepenthes)", "headline": "Cult of Personality", "definition": "매니아를 위한 독보적인 취향의 요새", "description": "니들스, 엔지니어드 가먼츠 등을 배출한 편집샵이자 브랜드 인큐베이터. 유행을 따르지 않고 자신들만의 확고한 세계관을 구축했습니다.", "website": ""}]};
+const DATA = {
+    "philosophy": [
+        {
+            "no": "1",
+            "name": "포스트 아카이브 팩션 (PAF)",
+            "country": "Korea",
+            "headline": "Deconstructive Pinnacle",
+            "definition": "해체주의 패션의 정점",
+            "description": "루이비통과 협업하며 옷을 예술품의 반열에 올린 브랜드. 전 세계가 주목하는 가장 독창적인 패턴과 실루엣을 보유했습니다."
+        },
+        {
+            "no": "2",
+            "name": "지용킴 (JiyongKim)",
+            "country": "Korea",
+            "headline": "Sun-bleached Future",
+            "definition": "햇빛이 만든 유일무이한 패턴",
+            "description": "자연광에 원단을 노출시키는 'Sun-bleach' 기법으로 지속 가능성과 희소성을 동시에 확보한 글로벌 라이징 스타입니다."
+        },
+        {
+            "no": "3",
+            "name": "르917 (르구일칠)",
+            "country": "Korea",
+            "headline": "Silent K-Luxury",
+            "definition": "한국의 '더 로우', 조용한 럭셔리",
+            "description": "로고 없이 오직 소재와 실루엣만으로 승부하는 브랜드. 우영미와 준지가 로고 플레이로 소비될 때, 성숙하고 감도 높은 고객들은 이곳으로 이동했습니다."
+        },
+        {
+            "no": "4",
+            "name": "엑스림 (XLIM)",
+            "country": "Korea",
+            "headline": "The New Structure",
+            "definition": "건축과 패션의 경계, 에피소드",
+            "description": "현재 패션 씬에서 가장 뜨거운 팬덤을 가진 브랜드. 건축적인 절개 라인과 독특한 염색 기법으로 스트릿 패션을 예술의 경지로 끌어올렸습니다."
+        },
+        {
+            "no": "5",
+            "name": "프라마 (FRAMA)",
+            "country": "Denmark",
+            "headline": "Architecture of Senses",
+            "definition": "공간을 규정하는 날것의 미학",
+            "description": "코펜하겐의 오래된 약국에서 시작된 디자인 스튜디오. 가공되지 않은 나무와 금속 등 소재의 물성을 그대로 살린 가구와 오브제, 자연의 향으로 전 세계 크리에이터들의 공간을 점령했습니다."
+        },
+        {
+            "no": "6",
+            "name": "디스트릭트 비전 (District Vision)",
+            "country": "USA",
+            "headline": "Running as Meditation",
+            "definition": "정신적 수양을 위한 러닝 아이웨어",
+            "description": "\"달리기는 명상이다\"라는 철학을 가진 뉴욕 브랜드. 단순한 운동이 아닌 정신적 수양을 위한 도구로 접근해 웰니스 트렌드를 이끕니다."
+        },
+        {
+            "no": "7",
+            "name": "퍼퓨머 H (Perfumer H)",
+            "country": "UK",
+            "headline": "Hand-blown Scent",
+            "definition": "유리 장인이 불어 만든 향수",
+            "description": "조향사 린 해리스가 만든 영국 브랜드로, 모든 병을 장인이 직접 만듭니다. 이솝을 졸업한 취향 좋은 사람들이 정착하는 '향수계의 공예품'입니다."
+        },
+        {
+            "no": "8",
+            "name": "디에스앤더가 (D.S. & DURGA)",
+            "country": "USA (NY)",
+            "headline": "Perfume is Armchair Travel",
+            "definition": "향기로 떠나는 브루클린의 예술 여행",
+            "description": "뮤지션과 건축가 부부가 만든 뉴욕 브루클린 기반의 니치 향수. \"향수는 보이지 않는 사운드트랙\"이라는 철학으로, 르라보를 넘어선 힙스터들의 새로운 종착지가 되었습니다."
+        },
+        {
+            "no": "9",
+            "name": "불리 1803 (Buly 1803)",
+            "country": "France",
+            "headline": "19th Century Beauty Secret",
+            "definition": "시간을 거스르는 뷰티 헤리티지",
+            "description": "19세기 프랑스 약국을 복각하여 압도적인 비주얼과 스토리를 제공합니다. 플라스틱 없는 패키징은 소장 욕구를 자극합니다."
+        },
+        {
+            "no": "10",
+            "name": "아스티에 드 빌라트 (ASTIER de VILLATTE)",
+            "country": "France",
+            "headline": "Parisian Imperfection",
+            "definition": "파리의 낭만을 빚은 백색의 도기",
+            "description": "19세기 방식으로 만든 가벼운 도자기는 각각 다른 모양을 가집니다. 불완전함이 주는 예술적 가치를 전합니다."
+        },
+        {
+            "no": "11",
+            "name": "텍라 (Tekla)",
+            "country": "Denmark",
+            "headline": "Architectural Comfort",
+            "definition": "기능과 심미성의 완벽한 조화",
+            "description": "코펜하겐 기반의 홈 패브릭으로, 건축적인 컬러감과 최고급 소재를 사용해 침실과 욕실을 감각적인 공간으로 바꿉니다."
+        },
+        {
+            "no": "12",
+            "name": "뮬러 반 세베렌\n(Muller Van Severen)",
+            "country": "Belgium",
+            "headline": "Furniture as Sculpture",
+            "definition": "가구와 예술의 경계를 허물다",
+            "description": "벨기에 출신의 비주얼 아티스트 듀오가 만든 브랜드. 가구를 기능적인 도구가 아닌 '공간에 놓인 조각품'으로 해석합니다. HAY보다 과감한 컬러와 소재 사용으로 전 세계 컬렉터들의 수집 대상이 되었습니다."
+        },
+        {
+            "no": "13",
+            "name": "틴에이지 엔지니어링 (Teenage Enginneering)",
+            "country": "Sweden",
+            "headline": "Tech as a Toy",
+            "definition": "기술을 장난감처럼, 디자인 혁명",
+            "description": "장난감 같은 디자인 속에 전문가급 기능을 담았습니다. 전 세계 크리에이터들이 사랑하는 컬트적 테크 브랜드입니다."
+        },
+        {
+            "no": "14",
+            "name": "라이카 (Leica)",
+            "country": "Germany",
+            "headline": "The Eyes of History",
+            "definition": "사진, 그 이상의 예술적 동반자",
+            "description": "100년 넘게 사진의 역사를 함께해 온 카메라 명가입니다. 붉은색 로고는 기술력과 예술성을 동시에 상징합니다."
+        },
+        {
+            "no": "15",
+            "name": "프라이탁 (Freitag)",
+            "country": "Switzerland",
+            "headline": "One and Only Recycled",
+            "definition": "세상에 단 하나뿐인 가방",
+            "description": "트럭 방수천을 재활용하여 모든 제품의 디자인이 다릅니다. 가치 소비 세대에게 가장 강력한 상징입니다."
+        },
+        {
+            "no": "16",
+            "name": "새티스파이 (Satisfy)",
+            "country": "France",
+            "headline": "High Cult Running",
+            "definition": "러닝 컬처의 마약 같은 감성",
+            "description": "파리 기반 브랜드로 러닝복을 '컬처'로 해석합니다. 찢어진 듯한 빈티지 가공과 소재감은 기존 스포츠 브랜드가 흉내 낼 수 없습니다."
+        },
+        {
+            "no": "17",
+            "name": "산타 마리아 노벨라 (Santa Maria Nobella)",
+            "country": "Italy",
+            "headline": "800 Years of Healing",
+            "definition": "피렌체 수도원의 치유 레시피",
+            "description": "세계에서 가장 오래된 약국으로, 800년 헤리티지를 담았습니다. 역사와 전통이 주는 깊은 신뢰감을 판매합니다."
+        },
+        {
+            "no": "18",
+            "name": "낫싱 (Nothing)",
+            "country": "UK",
+            "headline": "Pure Instinct Tech",
+            "definition": "기술을 투명하게 드러낸 디자인 혁명",
+            "description": "천편일률적인 테크 시장에 '투명함(Skeleton)'을 무기로 등장했습니다. 기술을 넘어 패션 아이템으로 소비되는 가장 힙한 브랜드입니다."
+        },
+        {
+            "no": "19",
+            "name": "버미큘라 (Vermicular)",
+            "country": "Japan",
+            "headline": "Cast Iron Perfection",
+            "definition": "0.01mm의 오차가 만든 미식",
+            "description": "일본 장인 정신의 정점인 주물 냄비 브랜드입니다. 재료 본연의 맛을 극대화하는 '무수분 조리'로 미식가들의 새로운 로망이 되었습니다."
+        },
+        {
+            "no": "20",
+            "name": "로우로우 (Rawrow)",
+            "country": "Korea",
+            "headline": "Essence of Things",
+            "definition": "본질에 집중한 날것의 디자인",
+            "description": "화려한 치장 대신 도구의 본질인 무게와 기능에 집중합니다. 트립웨어 시장에서 독보적 팬덤을 구축했습니다."
+        },
+        {
+            "no": "87",
+            "name": "아비에무아 (Àvie Muah)",
+            "country": "Korea",
+            "headline": "Taste of Muse",
+            "definition": "강민경의 감각적인 오피스 룩",
+            "description": "다비치 강민경이 런칭한 브랜드로, 2030 여성들에게 \"가장 입고 싶은 옷\" 1순위입니다. 연예인 브랜드라는 편견을 깨고, 독보적인 원단 퀄리티와 감성적인 디자인으로 백화점에서도 모셔가는 브랜드입니다."
+        },
+        {
+            "no": "89",
+            "name": "키스 (Kith)",
+            "country": "USA (NY)",
+            "headline": "King of Collaboration",
+            "definition": "성수동에 상륙한 뉴욕의 자존심",
+            "description": "단순한 스트릿 브랜드를 넘어, 시리얼 바와 의류를 결합한 라이프스타일 엠파이어. 성수동 매장은 아시아 패션의 랜드마크가 되었습니다."
+        },
+        {
+            "no": "91",
+            "name": "이스턴에디션",
+            "country": "Korea",
+            "headline": "Aesthetics of Joseon",
+            "definition": "조선의 미학, 현대적 가구",
+            "description": "양태오 디자이너가 전개하는 가구 브랜드. 한국적인 선과 여백을 현대 라이프스타일에 맞게 재해석했습니다. 해외 럭셔리 호텔과 갤러리가 먼저 찾는 아트 퍼니처입니다."
+        },
+        {
+            "no": "93",
+            "name": "금자안경 (Kaneko Optical)",
+            "country": "Japan",
+            "headline": "Masterpiece of Craft",
+            "definition": "후쿠이현 장인의 혼을 담다",
+            "description": "1958년부터 이어온 일본 안경 장인 정신의 상징. 트렌드를 좇는 젠틀몬스터와 달리, 변하지 않는 클래식과 최고의 착용감을 제공하는 하이엔드 아이웨어입니다."
+        },
+        {
+            "no": "94",
+            "name": "쉘 코퍼레이션",
+            "country": "Korea",
+            "headline": "Sustainable Gorpcore",
+            "definition": "자연을 위한 사려 깊은 아웃도어",
+            "description": "유해 물질 없는 친환경 소재로 만드는 고프코어 브랜드. 기능성만 강조하는 아웃도어 시장에 '지속 가능성'이라는 철학을 세련된 디자인으로 풀어냈습니다."
+        },
+        {
+            "no": "112",
+            "name": "다이와 피어39 (Daiwa Pier39)",
+            "country": "Japan",
+            "headline": "Fishing to Fashion",
+            "definition": "낚시복을 패션으로 바꾼 기적",
+            "description": "세계 1위 낚시구 브랜드 다이와가 만든 패션 라인. \"도시와 자연을 잇는 가교\"라는 컨셉으로, 펑퍼짐한 핏의 '시티보이 룩'을 완성시킨 장본인입니다. 일본 가면 무조건 사오는 브랜드 1순위입니다."
+        },
+        {
+            "no": "114",
+            "name": "토템 (Totême)",
+            "country": "Sweden",
+            "headline": "Scandi Chic Standard",
+            "definition": "더 로우의 합리적 대안",
+            "description": "스웨덴의 시크함을 대표하는 브랜드. 군더더기 없는 디자인과 스카프 자켓 등 시그니처 아이템으로 한국 3040 여성들의 '워너비 럭셔리'로 확실히 자리 잡았습니다."
+        },
+        {
+            "no": "120",
+            "name": "슈프림 (Supreme)",
+            "country": "USA (NY)",
+            "headline": "The Red Box Logo",
+            "definition": "도산공원을 점령한 스트릿의 신",
+            "description": "스트릿웨어의 영원한 상징. 한국 직진출(도산공원) 자체가 거대한 뉴스였으며, 여전히 대체 불가능한 쿨함의 상징입니다."
+        },
+        {
+            "no": "123",
+            "name": "르메르 (Lemaire)",
+            "country": "France (Paris)",
+            "headline": "Poetic Routine",
+            "definition": "한남동의 미학, 일상의 시(詩)",
+            "description": "\"옷을 위한 옷\"을 만드는 크리스토프 르메르의 브랜드. 한남동 플래그십 스토어는 특유의 차분한 톤으로 한국인들의 '최애' 브랜드가 되었습니다."
+        },
+        {
+            "no": "128",
+            "name": "카이트 (Khaite)",
+            "country": "USA (NY)",
+            "headline": "The New American Classic",
+            "definition": "뉴욕의 낭만, 관능적인 미니멀리즘",
+            "description": "\"로고 없는 럭셔리\"의 정점. 캐시미어 카디건과 구조적인 넥 라인으로 전 세계 여성들의 워너비가 된 브랜드입니다. 유행을 타지 않는 우아함으로 M몰의 격을 높입니다."
+        },
+        {
+            "no": "130",
+            "name": "비즈빔 (Visvim)",
+            "country": "Japan",
+            "headline": "Future Vintage",
+            "definition": "미래에서 온 빈티지, 궁극의 럭셔리",
+            "description": "디렉터 나카무라 히로키가 전 세계 희귀 원단과 염색 기법을 찾아 만드는 브랜드. \"신발 한 켤레에 100만 원\"이 넘지만 BTS RM 등 전 세계 셀럽이 열광하는 장인정신의 결정체입니다."
+        },
+        {
+            "no": "132",
+            "name": "더블탭스 (WTAPS)",
+            "country": "Japan",
+            "headline": "Mill-Spec Daily Wear",
+            "definition": "도시를 위한 완벽한 밀리터리 스펙",
+            "description": "\"모든 것을 있어야 할 곳에 둔다\"는 철학으로 밀리터리 룩을 현대적으로 재해석합니다. '시티보이' 룩의 원류이자, 뉴발란스 협업 등으로 여전히 리셀 시장을 뜨겁게 달구는 브랜드입니다."
+        },
+        {
+            "no": "141",
+            "name": "꼼 데 가르송 (Comme des Garçons)",
+            "country": "Japan",
+            "headline": "Anti-Fashion",
+            "definition": "패션을 거부하는 패션의 신",
+            "description": "레이 가와쿠보가 창시한 전위적인 패션의 상징. 단순한 옷을 넘어 예술과 철학을 파는 그룹으로, 브랜드 자체가 하나의 거대한 종교와 같습니다."
+        },
+        {
+            "no": "143",
+            "name": "이세이 미야케 (Issey Miyake)",
+            "country": "Japan",
+            "headline": "Architecture of Cloth",
+            "definition": "옷을 위한 건축학, 플리츠의 미학",
+            "description": "\"원단 한 장으로 옷을 만든다\"는 철학 아래 탄생한 주름(Pleats) 디자인은 기술이자 예술입니다. 스티브 잡스의 터틀넥을 만든 브랜드로도 유명합니다."
+        },
+        {
+            "no": "144",
+            "name": "휴먼 메이드 (Human Made)",
+            "country": "Japan",
+            "headline": "Gear for Futuristic Teenagers",
+            "definition": "Nigo가 만든 키치한 아메카지",
+            "description": "J-Pop과 스트릿 컬처의 대부 니고(Nigo)가 전개하는 브랜드. 빈티지한 아메리칸 캐주얼에 귀여운 그래픽을 더해 전 세계 MZ세대를 사로잡았습니다."
+        },
+        {
+            "no": "150",
+            "name": "사마야 (Samaya)",
+            "country": "France",
+            "headline": "The Pink Alpine",
+            "definition": "텐트계의 에르메스, 핑크의 반란",
+            "description": "프랑스 샤모니에서 탄생한 초경량 하이엔드 텐트. 압도적인 기술력과 시그니처 핑크 컬러로 '장비병' 끝판왕들의 위시리스트 1순위입니다."
+        },
+        {
+            "no": "151",
+            "name": "노르다 (Norda)",
+            "country": "Canada",
+            "headline": "Run with Dyneema",
+            "definition": "지구상에서 가장 강한 러닝화",
+            "description": "철보다 15배 강한 '다이니마' 소재로 만든 캐나다 트레일 러닝화. 살로몬의 유행이 지고 난 뒤, 진짜 힙스터들이 신는 고프코어 슈즈입니다."
+        },
+        {
+            "no": "153",
+            "name": "랩 골프 (L.A.B. Golf)",
+            "country": "USA",
+            "headline": "Zero Torque Putter",
+            "definition": "물리학이 증명한 퍼팅의 기적",
+            "description": "제로토크라는 혁신 기술로 골프 장비 시장을 흔들었습니다. 아담 스콧 등 PGA 선수들이 사용하며 성능을 입증한 공학적 럭셔리입니다."
+        },
+        {
+            "no": "160",
+            "name": "마리 잔느 (Marie Jeanne)",
+            "country": "France",
+            "headline": "Scent of Grasse",
+            "definition": "향수의 성지 그라스의 유산",
+            "description": "향수의 본고장 그라스의 원료 가문이 만든 니치 향수. 인위적이지 않은 자연의 향으로 향수 애호가들 사이에서 '숨겨진 보석'으로 통합니다."
+        }
+    ],
+    "visual": [
+        {
+            "no": "21",
+            "name": "젠틀몬스터 (Gentle Monster)",
+            "country": "Korea",
+            "headline": "Weird Beauty",
+            "definition": "기이한 아름다움의 실험",
+            "description": "공간과 제품을 통해 끊임없이 시각적 충격을 줍니다. 안경을 넘어선 글로벌 예술 오브제 브랜드입니다."
+        },
+        {
+            "no": "22",
+            "name": "탬버린즈 (Tamburins)",
+            "country": "Korea",
+            "headline": "Scent as Art",
+            "definition": "향수를 시각 예술로 승화하다",
+            "description": "감각적인 패키지와 오브제 같은 디자인으로 화장대를 갤러리로 만듭니다. 뷰티의 새로운 문법을 씁니다."
+        },
+        {
+            "no": "23",
+            "name": "누데이크 (Nudake)",
+            "country": "Korea",
+            "headline": "Fashion on the Plate",
+            "definition": "패션 같은 디저트",
+            "description": "먹기 아까울 정도의 시각적 충격을 주는 디저트를 선보입니다. 미식 경험을 시각 예술로 확장했습니다."
+        },
+        {
+            "no": "24",
+            "name": "떠그클럽 (Thug Club)",
+            "country": "Korea",
+            "headline": "Luxury Subculture",
+            "definition": "하이엔드로 올라선 서브컬처",
+            "description": "반항적인 감성을 하이엔드 퀄리티로 풀어내 전 세계 래퍼들이 열광합니다. 가장 핫하고 거친 비주얼을 자랑합니다."
+        },
+        {
+            "no": "25",
+            "name": "쿠시코크 (Kusikohc)",
+            "country": "Korea",
+            "headline": "Photographer's Eye",
+            "definition": "사진작가의 시선이 담긴 옷",
+            "description": "강렬한 그래픽과 실험적인 디테일이 특징입니다. 사진작가가 디렉팅하여 비주얼적인 완성도가 매우 높습니다."
+        },
+        {
+            "no": "26",
+            "name": "본봄 (Bonbom)",
+            "country": "Korea",
+            "headline": "Futuristic Silhouette",
+            "definition": "K-팝 아이돌 의상의 중심",
+            "description": "퓨처리스틱하고 과감한 컷아웃, 구조적인 실루엣으로 무대와 일상의 경계를 허무는 디자인을 선보입니다."
+        },
+        {
+            "no": "27",
+            "name": "오픈 와이와이 (Open Yy)",
+            "country": "Korea",
+            "headline": "Cool Girl Vibe",
+            "definition": "자유분방한 MZ세대의 워너비",
+            "description": "쿨하고 빈티지한 무드를 현대적으로 재해석했습니다. 정형화되지 않은 스타일링으로 여성들의 지지를 받습니다."
+        },
+        {
+            "no": "28",
+            "name": "더 뮤지엄 비지터",
+            "country": "Korea",
+            "headline": "Wearable Art",
+            "definition": "옷을 캔버스 삼은 예술",
+            "description": "디자이너가 직접 옷에 그림을 그리고 스프레이를 뿌립니다. 패션과 현대 미술의 경계에 있는 브랜드입니다."
+        },
+        {
+            "no": "29",
+            "name": "아라이 (Arai)",
+            "country": "Japan",
+            "headline": "The Helmet Master",
+            "definition": "바이커들의 영원한 신분증",
+            "description": "단순한 안전 장비를 넘어선, 장인 정신의 결정체. 네이버후드, 슈프림 등과 협업하며 서브컬처의 아이콘이 된 헬멧 브랜드입니다. CEO의 매니악한 취향을 대변하는 상징적인 아이템입니다."
+        },
+        {
+            "no": "30",
+            "name": "서저리 (Surgery)",
+            "country": "Korea",
+            "headline": "Reborn Vintage",
+            "definition": "헌 옷을 해체하고 수술하다",
+            "description": "빈티지 의류를 해체하고 재조립하는 '수술' 컨셉으로 세상에 하나뿐인 비주얼을 만들어냅니다."
+        },
+        {
+            "no": "31",
+            "name": "그레일즈 (Grailz)",
+            "country": "Korea",
+            "headline": "Futuristic Street",
+            "definition": "미래지향적 스트릿 웨어",
+            "description": "마니아층이 탄탄한 퓨처리스틱 디자인을 선보입니다. 독특한 절개 라인과 소재감이 시선을 끕니다."
+        },
+        {
+            "no": "32",
+            "name": "오조스 (Ojos)",
+            "country": "Korea",
+            "headline": "Decayed Tech",
+            "definition": "낡음과 기술의 공존",
+            "description": "빛바랜 듯한 색감에 기능성 디테일을 더한 독보적인 무드입니다. 오묘하고 신비로운 비주얼을 선사합니다."
+        },
+        {
+            "no": "33",
+            "name": "나체 (Nache)",
+            "country": "Korea",
+            "headline": "Bold Body Contour",
+            "definition": "과감한 바디 실루엣의 강조",
+            "description": "몸의 곡선을 드러내는 과감한 컷아웃과 디자인으로 가장 핫한 여성 디자이너 브랜드 중 하나입니다."
+        },
+        {
+            "no": "34",
+            "name": "2000아카이브",
+            "country": "Korea",
+            "headline": "Modern Y2K",
+            "definition": "가장 힙하게 해석한 세기말 감성",
+            "description": "Y2K 패션을 촌스럽지 않고 가장 세련되게 재해석했습니다. 아이돌과 인플루언서들의 필수 아이템입니다."
+        },
+        {
+            "no": "35",
+            "name": "글로니 (Glowny)",
+            "country": "Korea",
+            "headline": "LA Vintage Mood",
+            "definition": "빈티지하고 러블리한 감성",
+            "description": "LA의 자유로운 무드와 빈티지한 감성을 담았습니다. 소녀적이면서도 힙한 비주얼로 급부상했습니다."
+        },
+        {
+            "no": "36",
+            "name": "제이킴 (J.Kim)",
+            "country": "Korea",
+            "headline": "Oriental Fantasy",
+            "definition": "고려인의 뿌리, 현대적 미학",
+            "description": "우즈베키스탄 고려인 3세 디자이너가 만든 독보적 브랜드. 한국의 단청과 조각보를 연상시키는 컷아웃 디테일로 전 세계 패션계에 신선한 충격을 주었습니다."
+        },
+        {
+            "no": "37",
+            "name": "오소이 (Osoi)",
+            "country": "Korea",
+            "headline": "Structural Chic",
+            "definition": "독창적인 하드웨어와 구조",
+            "description": "자체 개발한 하드웨어 장식과 건축적인 쉐입이 특징입니다. 모던하면서도 유니크한 미감을 보여줍니다."
+        },
+        {
+            "no": "38",
+            "name": "이에이에 (Yie Yie)",
+            "country": "Korea",
+            "headline": "Unique Heels",
+            "definition": "발끝에서 완성되는 유니크",
+            "description": "독특한 굽 디자인과 과감한 컬러 매치가 돋보입니다. 슈즈 하나로 전체 룩의 포인트를 완성합니다."
+        },
+        {
+            "no": "90",
+            "name": "어반 소피스티케이션",
+            "country": "USA/Israel",
+            "headline": "Puffer on Phone",
+            "definition": "거울 셀카를 위한 최고의 액세서리",
+            "description": "패딩 점퍼를 입힌 듯한 '푸퍼 케이스'로 글로벌 히트를 친 브랜드. 단순한 폰 케이스가 아니라, Gen Z의 정체성을 보여주는 패션 아이템입니다."
+        },
+        {
+            "no": "111",
+            "name": "써네이 (Sunnei)",
+            "country": "Italy (Milan)",
+            "headline": "Italian Wit",
+            "definition": "밀라노 패션의 유쾌한 반란",
+            "description": "굵은 스트라이프 티셔츠와 고무 소재 귀걸이 등 컬러풀하고 위트 있는 디자인으로 밀라노 패션의 엄숙함을 깼습니다."
+        },
+        {
+            "no": "115",
+            "name": "메종 미하라 야스히로",
+            "country": "Japan",
+            "headline": "Melting Sole",
+            "definition": "녹아내린 신발, 지드래곤의 픽",
+            "description": "컨버스나 반스 같은 익숙한 신발의 밑창이 녹아내린 듯한 디자인이 특징입니다. 지드래곤 등 전 세계 셀럽들이 착용하며 '못생겼는데 예쁜' 신발 트렌드를 만들었습니다."
+        },
+        {
+            "no": "119",
+            "name": "팀 왕 디자인 (TEAM WANG design)",
+            "country": "China/Global",
+            "headline": "Global Performer",
+            "definition": "잭슨의 글로벌 럭셔리 스트릿",
+            "description": "갓세븐 잭슨이 디렉팅하는 글로벌 브랜드. 미니멀하지만 강렬한 블랙 컨셉으로 전 세계 백화점에서 팝업을 엽니다. 아티스트의 글로벌 인맥과 감각이 돋보이는 럭셔리 스트릿 웨어입니다."
+        },
+        {
+            "no": "124",
+            "name": "꾸레쥬 (Courrèges)",
+            "country": "France (Paris)",
+            "headline": "Future is Back",
+            "definition": "제니가 사랑한 스페이스 에이지",
+            "description": "60년대 퓨처려즘을 현대적인 Y2K 감성으로 부활시켰습니다. 작은 로고의 니트와 바이닐 소재 자켓은 MZ세대 명품 입문 1순위입니다."
+        },
+        {
+            "no": "125",
+            "name": "자크뮈스 (Jacquemus)",
+            "country": "France (Paris)",
+            "headline": "Surreal Pop Art",
+            "definition": "팝한 컬러와 초현실적인 비율",
+            "description": "거대한 밀짚모자와 아주 작은 가방(치키토). SNS 시대에 가장 적합한 비주얼 쇼크를 주는 브랜드로, 팝업 스토어마다 대기 행렬을 만듭니다."
+        },
+        {
+            "no": "133",
+            "name": "언더커버 (Undercover)",
+            "country": "Japan",
+            "headline": "Punk Meets Couture",
+            "definition": "펑크 정신을 입은 하이엔드 예술",
+            "description": "디자이너 준 다카하시가 이끄는 브랜드로, \"옷이 아니라 소음(Noise)을 만든다\"는 슬로건처럼 전위적이고 예술적입니다. 나이키(Gyakusou)와의 협업부터 파리 컬렉션까지 아우르는 일본 패션의 자존심입니다."
+        },
+        {
+            "no": "154",
+            "name": "플레이 포에버 (Playforever)",
+            "country": "UK",
+            "headline": "Art Toys for Dad",
+            "definition": "아빠와 아들을 위한 드림카",
+            "description": "1960년대 경주용 자동차를 재해석한 영국 아트 토이. 장난감을 넘어선 오브제로, 자동차를 사랑하는 CEO의 서재에 완벽하게 어울립니다."
+        },
+        {
+            "no": "157",
+            "name": "테디테일즈 (Teddy Tales)",
+            "country": "Russia/Global",
+            "headline": "Handmade Soulmate",
+            "definition": "어른을 위한 수제 테디베어",
+            "description": "러시아 작가가 디자인한 핸드메이드 곰 인형. 정교한 관절과 사랑스러운 표정으로 키덜트족의 소장 욕구를 자극하는 프리미엄 아트 토이입니다."
+        }
+    ],
+    "scarcity": [
+        {
+            "no": "39",
+            "name": "산산기어 (San San Gear)",
+            "country": "Korea",
+            "headline": "Core of Gorpcore",
+            "definition": "고프코어 룩의 핵심",
+            "description": "기능성과 일상복의 경계에 있는 테크웨어로, 높은 희소성과 강력한 팬덤을 보유하고 있습니다."
+        },
+        {
+            "no": "40",
+            "name": "케일 (Cayl)",
+            "country": "Korea",
+            "headline": "Local Outdoor Spirit",
+            "definition": "클라이밍 기반의 진정성",
+            "description": "한국의 산과 클라이밍 문화를 기반으로 성장한 로컬 아웃도어입니다. 진정성 있는 디자인이 매력입니다."
+        },
+        {
+            "no": "41",
+            "name": "언더마이카 (Undermycar)",
+            "country": "Korea",
+            "headline": "Drop System Fandom",
+            "definition": "없어서 못 사는 테크 웨어",
+            "description": "기습적인 드롭(Drop) 판매 방식으로 팬덤을 열광시킵니다. 희소성이 브랜드 가치의 핵심입니다."
+        },
+        {
+            "no": "42",
+            "name": "폴리테루 (Polyteru)",
+            "country": "Korea",
+            "headline": "Relaxed High-End",
+            "definition": "웨이팅 필수, 감도 높은 남성복",
+            "description": "편안하지만 섬세한 디테일로 발매 즉시 품절되는 브랜드입니다. 남성들의 절대적인 지지를 받습니다."
+        },
+        {
+            "no": "43",
+            "name": "해칭룸 (Hatching Room)",
+            "country": "Korea",
+            "headline": "Genderless Contemporary",
+            "definition": "젠더리스 실루엣의 미학",
+            "description": "남녀 구분 없는 유려한 실루엣과 감각적인 디테일이 특징입니다. 차분하지만 확실한 존재감을 가집니다."
+        },
+        {
+            "no": "44",
+            "name": "아트 이프 액츠",
+            "country": "Korea",
+            "headline": "Artistic Inspiration",
+            "definition": "예술적 영감을 옷으로 풀다",
+            "description": "차분한 무드 속에 예술적 디테일을 숨겨놓았습니다. 오래 입을수록 가치를 발견하게 되는 옷입니다."
+        },
+        {
+            "no": "45",
+            "name": "브라운야드 (Brownyard)",
+            "country": "Korea",
+            "headline": "Utility & Stability",
+            "definition": "단단하고 실용적인 워크웨어",
+            "description": "유행을 타지 않는 단단한 디자인과 실용성을 갖췄습니다. 기본에 충실한 옷의 힘을 보여줍니다."
+        },
+        {
+            "no": "46",
+            "name": "포터리 (Pottery)",
+            "country": "Korea",
+            "headline": "New Business Casual",
+            "definition": "비즈니스 캐주얼의 새로운 기준",
+            "description": "좋은 도자기'처럼 본질에 충실합니다. 현대 직장인 남성들에게 가장 완벽한 유니폼을 제안합니다."
+        },
+        {
+            "no": "47",
+            "name": "헤리티지 플로스",
+            "country": "Korea",
+            "headline": "Future Vintage",
+            "definition": "미래의 빈티지를 만들다",
+            "description": "최고의 원단과 실을 직접 개발하여 사용합니다. 시간이 지날수록 멋어러워지는 옷을 만듭니다."
+        },
+        {
+            "no": "48",
+            "name": "이스트로그 (Eastlogue)",
+            "country": "Korea",
+            "headline": "Modern Military",
+            "definition": "밀리터리의 현대적 아카이브",
+            "description": "밀리터리와 헌팅 웨어를 복각하고 재해석하여 독보적인 아카이브를 구축했습니다."
+        },
+        {
+            "no": "49",
+            "name": "유스 (Youth)",
+            "country": "Korea",
+            "headline": "Minimal & Destructive",
+            "definition": "미니멀 속에 숨겨진 파격",
+            "description": "겉보기엔 미니멀하지만 자세히 보면 파괴적인 디테일이 숨어 있는 쿨한 감성의 브랜드입니다."
+        },
+        {
+            "no": "50",
+            "name": "어나더오피스",
+            "country": "Korea",
+            "headline": "Work-Life Balance",
+            "definition": "일과 삶을 위한 지적 데일리웨어",
+            "description": "편안하면서도 지적인 무드를 연출합니다. 일상과 오피스를 오가는 유연한 라이프스타일을 대변합니다."
+        },
+        {
+            "no": "51",
+            "name": "나띵리튼 (Nothing Written)",
+            "country": "Korea",
+            "headline": "Effortless Chic",
+            "definition": "꾸미지 않은 듯한 자연스러움",
+            "description": "과하지 않은 디자인과 좋은 소재로 여성들의 데일리 럭셔리로 자리 잡았습니다."
+        },
+        {
+            "no": "52",
+            "name": "시엔느 (Sienne)",
+            "country": "Korea",
+            "headline": "French Vibe",
+            "definition": "서울에서 만나는 프렌치 무드",
+            "description": "감각적인 컬러 팔레트와 빈티지한 무드로 두터운 여성 팬덤을 보유하고 있습니다."
+        },
+        {
+            "no": "53",
+            "name": "렉토 (Recto)",
+            "country": "Korea",
+            "headline": "Structured Beauty",
+            "definition": "중성적이고 구조적인 실루엣",
+            "description": "직선과 곡선의 조화를 통해 중성적인 아름다움을 표현합니다. 디자이너 브랜드의 정석과도 같습니다."
+        },
+        {
+            "no": "54",
+            "name": "로우 클래식 (Low Classic)",
+            "country": "Korea",
+            "headline": "Seoul Minimalism",
+            "definition": "서울 여성을 대변하는 미니멀리즘",
+            "description": "세련되고 절제된 디자인으로 K-패션의 위상을 높인 1세대 디자이너 브랜드입니다."
+        },
+        {
+            "no": "55",
+            "name": "아모멘토 (Amomento)",
+            "country": "Korea",
+            "headline": "Understated Attitude",
+            "definition": "절제된 디자인과 태도",
+            "description": "편집숍 기반으로 시작하여, 과장 없는 디자인과 특유의 차분한 감성을 전합니다."
+        },
+        {
+            "no": "56",
+            "name": "민주킴 (Minjukim)",
+            "country": "Korea",
+            "headline": "Fairy Tale Couture",
+            "definition": "동화적이고 예술적인 쿠튀르",
+            "description": "넷플릭스 우승 디자이너로, 독창적인 프린팅과 볼륨감 있는 실루엣이 특징입니다."
+        },
+        {
+            "no": "57",
+            "name": "쿠오카 (Kuoca)",
+            "country": "Korea",
+            "headline": "Fine Dining Skincare",
+            "definition": "파인 다이닝 철학의 스킨케어",
+            "description": "주문 후 제조하는 신선함과 최고급 원료로 스킨케어에 미식의 철학을 도입했습니다."
+        },
+        {
+            "no": "58",
+            "name": "엑스 니힐로 (Ex Nihilo)",
+            "country": "France",
+            "headline": "Avant-Garde Scent",
+            "definition": "파리 방돔 광장의 벤처 향수",
+            "description": "\"무(無)에서 유(有)를 창조한다\"는 뜻의 럭셔리 니치 향수. 뻔한 향수 대신, 나만의 향을 레이어링(Osmologue)하는 경험을 제공하며 향수 덕후들의 종착지로 불립니다."
+        },
+        {
+            "no": "85",
+            "name": "피스마이너스원 (PEACEMINUSONE)",
+            "country": "Korea",
+            "headline": "The King of K-Pop",
+            "definition": "지드래곤(GD)의 세계관 그 자체",
+            "description": "말이 필요 없는 브랜드. 나이키와 협업할 수 있는 유일무이한 국내 브랜드이자, 전 세계 패션 씬에서 가장 강력한 영향력을 가집니다. 단순한 의류가 아니라 '현대 미술'과도 같은 희소성을 자랑합니다."
+        },
+        {
+            "no": "113",
+            "name": "아워 레가시 (Our Legacy)",
+            "country": "Sweden",
+            "headline": "Cult Fabric Master",
+            "definition": "패피들이 가장 사랑하는 옷",
+            "description": "현재 패션 씬에서 \"가장 쿨한 브랜드\" 하나만 꼽으라면 단연코 아워 레가시입니다. 독특한 소재감과 빈티지한 워싱은 그 누구도 흉내 낼 수 없습니다. 스투시와의 협업으로 주가가 천정부지로 솟았습니다."
+        },
+        {
+            "no": "116",
+            "name": "로아 하이킹 (ROA Hiking)",
+            "country": "Italy",
+            "headline": "Luxury Gorpcore",
+            "definition": "등산화가 명품을 만났을 때",
+            "description": "이탈리아의 장인 정신과 하이킹 부츠가 결합했습니다. 투박한 등산화가 아니라, 슬랙스에 신어도 어울리는 가장 섹시한 고프코어 슈즈입니다."
+        },
+        {
+            "no": "118",
+            "name": "엔노이 (Ennoy)",
+            "country": "Japan",
+            "headline": "The Ghost Brand",
+            "definition": "돈 있어도 못 사는 도쿄의 유령",
+            "description": "매장도 없고, 인스타로만 기습 발매하는 도쿄의 '비밀 결사대' 같은 브랜드. \"The Professional\"이라는 문구 하나로 일본 힙스터들을 줄 세웁니다. 희소성 끝판왕입니다."
+        },
+        {
+            "no": "121",
+            "name": "에임 레온 도르 (Aimé Leon Dore)",
+            "country": "USA (NY)",
+            "headline": "New American Classic",
+            "definition": "뉴욕의 낭만, 뉴발란스의 구원자",
+            "description": "디렉터 테디 산티스가 이끄는 '뉴 프레피 룩'의 정점. 뉴발란스와의 협업으로 전 세계 리셀 시장을 뒤흔든 가장 우아한 스트릿 브랜드입니다."
+        },
+        {
+            "no": "122",
+            "name": "더 로우 (The Row)",
+            "country": "USA (NY)",
+            "headline": "Quiet Luxury Summit",
+            "definition": "로고 없이 압도하는 올드머니 룩",
+            "description": "올슨 자매가 만든 '조용한 럭셔리'의 끝판왕. 제니 등 셀럽들이 로고 없는 가방을 들며 한국에서도 '부의 상징'으로 통합니다."
+        },
+        {
+            "no": "126",
+            "name": "키코 코스타디노브 (Kiko Kostadinov)",
+            "country": "UK (London)",
+            "headline": "Tech-Fashion Genius",
+            "definition": "아식스를 부활시킨 천재",
+            "description": "패턴 커팅의 천재라 불리며, 아식스와의 협업으로 전 세계 스니커즈 씬을 평정했습니다. 한국 테크웨어/고프코어 트렌드의 핵심입니다."
+        },
+        {
+            "no": "127",
+            "name": "마틴 로즈 (Martine Rose)",
+            "country": "UK (London)",
+            "headline": "Distorted Normality",
+            "definition": "뒤틀린 클래식, 런던의 반항아",
+            "description": "평범한 남성복을 기묘하게 비틀어(Distort) 쿨함을 만듭니다. 나이키 샥스 협업 등 남들과 다른 '한 끗'을 찾는 힙스터들의 원픽입니다."
+        },
+        {
+            "no": "129",
+            "name": "C.E (Cav Empt)",
+            "country": "Japan",
+            "headline": "Legend of Graphic",
+            "definition": "스트릿의 전설이 만든 그래픽",
+            "description": "베이프(BAPE)의 그래픽을 담당했던 전설적인 디자이너가 만든 브랜드. 독특한 미래주의적 그래픽과 실루엣으로 마니아층의 절대적인 지지를 받습니다."
+        },
+        {
+            "no": "145",
+            "name": "오라리 (Auralee)",
+            "country": "Japan",
+            "headline": "Material Obsession",
+            "definition": "소재에 집착하는 지독한 순수주의",
+            "description": "\"소재가 디자인이다\"라는 신념으로 전 세계 최고급 원료를 직접 수급해 만듭니다. 겉보기엔 평범해 보이나 만져보는 순간 구매하게 되는 마성의 브랜드입니다."
+        },
+        {
+            "no": "146",
+            "name": "캐피탈 (Kapital)",
+            "country": "Japan",
+            "headline": "Denim Artisan",
+            "definition": "일본 데님과 보로(Boro)의 예술",
+            "description": "일본 오카야마의 데님 장인 기술에 히피 문화를 결합했습니다. 기워 입은 듯한 보로(Boro) 디테일과 스마일 로고는 캐피탈만의 확실한 아이덴티티입니다."
+        },
+        {
+            "no": "147",
+            "name": "핸더 스킴 (Hender Scheme)",
+            "country": "Japan",
+            "headline": "Homage to Leather",
+            "definition": "가죽으로 빚어낸 오마주",
+            "description": "나이키, 아디다스 등의 아이코닉한 스니커즈를 오직 베지터블 가죽으로만 재현(오마주)합니다. 시간이 지날수록 태닝되며 나만의 신발로 완성됩니다."
+        },
+        {
+            "no": "148",
+            "name": "앤드 원더 (And Wander)",
+            "country": "Japan",
+            "headline": "Fashion in Nature",
+            "definition": "이세이 미야케 출신이 만든 아웃도어",
+            "description": "기능성 아웃도어 의류에 하이패션의 감성을 완벽하게 이식했습니다. 산에서도 도시에서도 가장 세련된 고프코어 룩을 완성합니다."
+        },
+        {
+            "no": "166",
+            "name": "미스테리 랜치 (Mystery Ranch)",
+            "country": "USA",
+            "headline": "Built for the Mission",
+            "definition": "미군이 선택한 배낭의 전설",
+            "description": "\"어떤 임무에서도 살아남는다\"는 내구성을 자랑하는 백팩 브랜드. 밀리터리 마니아와 백패커들에게 '졸업템'으로 불리는 장비입니다."
+        }
+    ],
+    "narrative": [
+        {
+            "no": "59",
+            "name": "모노하 (Monoha)",
+            "country": "Korea",
+            "headline": "Aesthetics of Emptiness",
+            "definition": "여백과 비움의 미학",
+            "description": "전시, 의류, 카페를 통해 한국적인 여백의 미를 경험하게 하는 복합 문화 공간입니다."
+        },
+        {
+            "no": "60",
+            "name": "챕터원 (Chapter 1)",
+            "country": "Korea",
+            "headline": "Craftsmanship Living",
+            "definition": "한국적 리빙 트렌드의 제안",
+            "description": "국내외 공예 작가와 가구를 소개하며, 공간에 취향과 이야기를 불어넣습니다."
+        },
+        {
+            "no": "61",
+            "name": "텍스쳐 (Txture)",
+            "country": "Korea",
+            "headline": "Vintage Texture",
+            "definition": "질감을 통해 전하는 따뜻함",
+            "description": "가구와 오브제의 질감(Texture)에 집중하여 빈티지하고 따뜻한 라이프스타일을 제안합니다."
+        },
+        {
+            "no": "62",
+            "name": "오이뮤 (Oimyu)",
+            "country": "Korea",
+            "headline": "Modern Tradition",
+            "definition": "잊혀진 과거의 현대적 부활",
+            "description": "향, 성냥 등 잊혀져 가는 과거의 물건을 현대적 디자인으로 되살려 세대 간을 연결합니다."
+        },
+        {
+            "no": "63",
+            "name": "콜린스 (Collins)",
+            "country": "Korea",
+            "headline": "Personal Moments",
+            "definition": "지극히 개인적인 순간을 위하여",
+            "description": "인센스를 통해 혼자만의 사색하는 시간을 제안합니다. 감성적인 스토리텔링이 강점입니다."
+        },
+        {
+            "no": "64",
+            "name": "피치스 (Peaches)",
+            "country": "Korea",
+            "headline": "Street Car Culture",
+            "definition": "자동차 문화를 스트릿 패션으로",
+            "description": "자동차 튜닝 문화를 기반으로 패션, 영상, F&B를 아우르는 강력한 팬덤 브랜드입니다."
+        },
+        {
+            "no": "65",
+            "name": "아더에러 (ADER Error)",
+            "country": "Korea",
+            "headline": "Beauty of Error",
+            "definition": "오류에서 발견한 창조",
+            "description": "오류'를 테마로 패션과 전시를 결합했습니다. 매장 자체가 하나의 갤러리인 크리에이티브 그룹입니다."
+        },
+        {
+            "no": "66",
+            "name": "마뗑킴 (Matin Kim)",
+            "country": "Korea",
+            "headline": "Communication Power",
+            "definition": "소통이 만든 팬덤 브랜드",
+            "description": "디렉터의 솔직한 SNS 소통이 브랜드의 핵심 경쟁력이 되어, 강력한 충성 고객을 만들었습니다."
+        },
+        {
+            "no": "67",
+            "name": "기준 (Kijun)",
+            "country": "Korea",
+            "headline": "Seoul Cool Energy",
+            "definition": "80년대 서울의 쿨한 재해석",
+            "description": "80-90년대 서울의 미감을 현대적이고 위트 있게 재해석합니다. 촌스러움과 세련됨을 오가는 '코리안 쿨'입니다."
+        },
+        {
+            "no": "68",
+            "name": "튀위드 (Tuewid)",
+            "country": "Korea",
+            "headline": "Grunge Leather Mood",
+            "definition": "성수동의 빈티지 그런지 감성",
+            "description": "특유의 빈티지한 가죽 질감과 그런지한 무드가 압권입니다. 반짝 유행이 아니라 브랜드 고유의 깊은 무드를 팝니다."
+        },
+        {
+            "no": "69",
+            "name": "아티스트 베이커리",
+            "country": "Korea",
+            "headline": "Bread as Art",
+            "definition": "빵을 예술로 대하는 태도",
+            "description": "런던 베이글 뮤지엄 팀의 차기작으로, 소금빵을 다양한 예술적 토핑으로 풀어냅니다."
+        },
+        {
+            "no": "71",
+            "name": "테크닉스 (Technics)",
+            "country": "Japan",
+            "headline": "Legend of Sound",
+            "definition": "턴테이블의 살아있는 전설",
+            "description": "DJ 문화의 상징이자 오디오 애호가들의 로망. 아날로그 사운드의 부활과 함께, 공간의 품격을 높이는 가장 완벽한 인테리어 오브제로 다시 주목받고 있습니다."
+        },
+        {
+            "no": "86",
+            "name": "NOS7 (엔오에스세븐)",
+            "country": "Korea",
+            "headline": "Nothing, Ordinary Sunday",
+            "definition": "손흥민의 편안한 일주일",
+            "description": "월드클래스 축구선수 손흥민의 브랜드. 거창한 스포츠 웨어가 아닌, 그가 경기장 밖에서 즐기는 편안한 휴식과 일상을 담았습니다. \"손흥민이 입는 옷\"이라는 서사만으로도 강력한 팬덤을 이끕니다."
+        },
+        {
+            "no": "88",
+            "name": "바샤 커피 (Bacha Coffee)",
+            "country": "Morocco",
+            "headline": "Coffee of Hermes",
+            "definition": "모로코에서 온 커피계의 에르메스",
+            "description": "100% 아라비카 원두와 화려한 틴케이스, 압도적인 매장 경험으로 '선물하기' 시장을 평정했습니다. 단순한 커피가 아니라 '럭셔리한 경험'을 선물하는 브랜드입니다."
+        },
+        {
+            "no": "92",
+            "name": "이야이야앤프렌즈",
+            "country": "Greece",
+            "headline": "Wit in Grocery",
+            "definition": "세상에서 가장 귀여운 올리브 오일",
+            "description": "그리스 최상급 올리브 오일을 위트 있는 캐릭터 패키지에 담았습니다. \"오일도 이렇게 힙할 수 있다\"는 것을 보여주며, 센스 있는 기프트 아이템으로 각광받습니다."
+        },
+        {
+            "no": "117",
+            "name": "스포티 앤 리치 (Sporty & Rich)",
+            "country": "USA",
+            "headline": "Wellness Aesthetic",
+            "definition": "성공한 사람들의 휴일 룩",
+            "description": "\"건강하고, 부유하고, 예쁘게.\" 8090년대 부자들의 테니스 클럽, 헬스 클럽 룩을 표방합니다. 단순한 옷이 아니라 '웰니스 라이프스타일'을 파는 브랜드로 여성들에게 인기 폭발입니다."
+        },
+        {
+            "no": "131",
+            "name": "니들스 (Needles)",
+            "country": "Japan",
+            "headline": "Butterfly Effect",
+            "definition": "트랙 팬츠 하나로 세계를 제패",
+            "description": "나비 로고가 새겨진 트랙 팬츠(츄리닝)를 하이엔드 패션으로 격상시켰습니다. 아메리칸 빈티지와 일본의 섬세함을 섞은 네펜데스 산하의 핵심 브랜드입니다."
+        },
+        {
+            "no": "134",
+            "name": "네이버후드 (Neighborhood)",
+            "country": "Japan",
+            "headline": "Cult of Incense",
+            "definition": "연기가 피어오르는 수집의 미학",
+            "description": "하라주쿠 스트릿의 대부이자 바이커 컬처의 상징. 의류뿐 아니라 독창적인 디자인의 '인센스 챔버(향로)'와 식물 라인(SRL)은 전 세계 수집가들이 탐내는 최고의 리빙 오브제입니다."
+        },
+        {
+            "no": "149",
+            "name": "포터 클래식 (Porter Classic)",
+            "country": "Japan",
+            "headline": "Sashiko Standard",
+            "definition": "가방 장인 가문의 새로운 유산",
+            "description": "요시다 포터' 가문의 일원이 독립해 만든 브랜드. 일본 전통 자수 기법인 사시코(Sashiko)를 적용한 의류와 가방은 입을 수 있는 예술품입니다."
+        },
+        {
+            "no": "152",
+            "name": "다이닛 (Deinet)",
+            "country": "Korea",
+            "headline": "Return of the Queen",
+            "definition": "마뗑킴 신화의 새로운 챕터",
+            "description": "2,000억 신화 마뗑킴을 만든 김다인 대표의 신규 브랜드. 대중화된 마뗑킴을 떠나, 그녀의 감각을 그리워하던 코어 팬덤이 결집한 2026년 가장 핫한 루키입니다."
+        },
+        {
+            "no": "155",
+            "name": "본톤토이즈 (Bon Ton Toys)",
+            "country": "Netherlands",
+            "headline": "Sustainable Cuteness",
+            "definition": "미피(Miffy)의 지속 가능한 변신",
+            "description": "100% 재활용 소재로 만드는 네덜란드 프리미엄 인형. 코듀로이, 데님 등 다양한 소재의 미피 인형은 키즈룸뿐 아니라 성인의 인테리어 소품으로도 인기입니다."
+        },
+        {
+            "no": "156",
+            "name": "젤리캣 (Jellycat)",
+            "country": "UK",
+            "headline": "The Bonding Doll",
+            "definition": "국민 애착 인형, 런던의 감성",
+            "description": "설명이 필요 없는 프리미엄 인형 브랜드. 백화점 오픈런을 부르는 키링과 인형들은 10대부터 30대 여성까지 폭넓은 팬덤을 보유하고 있습니다."
+        },
+        {
+            "no": "158",
+            "name": "스내피커들 (Snappy Cuddle)",
+            "country": "Korea",
+            "headline": "Lounge in Style",
+            "definition": "집순이들의 럭셔리 유니폼",
+            "description": "\"가장 편안하지만 가장 스타일리시하게.\" 셀럽들이 입는 파자마로 유명하며, 홈웨어의 격을 한 단계 높인 라운지웨어 브랜드입니다."
+        },
+        {
+            "no": "159",
+            "name": "스킴스 (SKIMS)",
+            "country": "USA",
+            "headline": "Body Positive Icon",
+            "definition": "킴 카다시안의 속옷 제국",
+            "description": "킴 카다시안이 만든 보정 속옷 및 라운지웨어. 전 세계 직구 대란을 일으키며 '속옷도 패션'이라는 새로운 트렌드를 만들었습니다."
+        },
+        {
+            "no": "165",
+            "name": "그랑핸드 (Granhand)",
+            "country": "Korea",
+            "headline": "Scent of Memory",
+            "definition": "북촌의 기억을 담은 향기",
+            "description": "수제 향수라는 독특한 감성과 마대 자루 패키지, 그리고 각인 서비스로 20대에게 가장 사랑받는 입문용 니치 향수입니다."
+        },
+        {
+            "no": "167",
+            "name": "모모스커피 (Momos Coffee)",
+            "country": "Korea",
+            "headline": "World Champion from Busan",
+            "definition": "부산이 낳은 월드 챔피언의 산실",
+            "description": "한국 최초 월드 바리스타 챔피언(전주연)을 배출하며 한국 커피의 위상을 세계에 알린 브랜드. \"스페셜티 커피를 모두에게\"라는 철학 아래, 부산 영도와 온천장을 커피 순례자들의 성지로 만들었습니다."
+        }
+    ],
+    "inspiration": [
+        {
+            "no": "70",
+            "name": "카멜커피 (Camel Coffee)",
+            "country": "Korea",
+            "headline": "Coffee & Culture",
+            "definition": "커피 그 이상의 문화 살롱",
+            "description": "빈티지한 공간과 디렉터의 위트가 결합되어 방문 자체가 즐거운 경험이 됩니다."
+        },
+        {
+            "no": "72",
+            "name": "모자이크 (Mosaic)",
+            "country": "Korea",
+            "headline": "Analog Sound",
+            "definition": "아날로그 음악의 발견",
+            "description": "희귀한 LP를 디깅하고 감상할 수 있는 레코드 샵이자 카페로, 아날로그 감성을 전합니다."
+        },
+        {
+            "no": "73",
+            "name": "바 참 (Bar Cham)",
+            "country": "Korea",
+            "headline": "Local Spirit Cocktail",
+            "definition": "한옥에서 즐기는 로컬 칵테일",
+            "description": "한국 전통주를 기주로 한 창작 칵테일로 세계적인 바 랭킹에 이름을 올렸습니다."
+        },
+        {
+            "no": "74",
+            "name": "제스트 (Zest)",
+            "country": "Korea",
+            "headline": "Sustainable Fine Drinking",
+            "definition": "제로 웨이스트 미식의 실천",
+            "description": "식재료의 껍질까지 활용하는 'Zero Waste' 철학을 바 운영에 접목한 선구자입니다."
+        },
+        {
+            "no": "75",
+            "name": "수토메 아포테케리 (Sutome Apothecary)",
+            "country": "Korea",
+            "headline": "Scent of Pilgrimage",
+            "definition": "영혼을 치유하는 향의 순례",
+            "description": "단순한 향수가 아니라 '치유와 명상'을 위한 향을 만듭니다. 한국의 산과 들, 사찰에서 영감을 받은 깊고 그윽한 향은 CEO들에게 진정한 휴식을 선사합니다. 그랑핸드의 상위 호환 버전입니다."
+        },
+        {
+            "no": "76",
+            "name": "바이라오 (Vyrao)",
+            "country": "UK",
+            "headline": "High Vibration Scent",
+            "definition": "에너지를 정화하는 '위치(Witch)' 컬처",
+            "description": "패션계 거물 야스민 스웰이 런칭한 브랜드. 향수 병 안에 '허키머 다이아몬드(원석)'가 들어있어, 뿌리는 순간 부정적인 에너지를 정화한다는 컨셉입니다. 2026년 웰니스 트렌드의 정점입니다."
+        },
+        {
+            "no": "77",
+            "name": "페사드 (Pesade)",
+            "country": "Korea",
+            "headline": "Beauty Curator",
+            "definition": "아름다움을 보는 새로운 시각",
+            "description": "향수와 핸드크림을 넘어 공간과 오브제까지 아우르는 예술적인 뷰티 브랜드입니다."
+        },
+        {
+            "no": "78",
+            "name": "본투스탠드아웃",
+            "country": "Korea",
+            "headline": "Rebel in Porcelain",
+            "definition": "백자의 재해석, 관능의 반전",
+            "description": "조선 백자를 현대적으로 재해석한 병 디자인에 관능적이고 도발적인 향을 담았습니다."
+        },
+        {
+            "no": "79",
+            "name": "알비오더블유 (RboW)",
+            "country": "Korea",
+            "headline": "Art in Daily Life",
+            "definition": "화장대 위의 작은 전시회",
+            "description": "아트 큐레이션 플랫폼이자 뷰티 브랜드로, 예술을 일상재로 소유하게 합니다."
+        },
+        {
+            "no": "80",
+            "name": "언베니쉬 (Unvanish)",
+            "country": "Korea",
+            "headline": "Men's Grooming",
+            "definition": "사라지지 않는 남자의 가치",
+            "description": "남성들의 라이프스타일과 그루밍을 제안하며, 잊혀지지 않는 본질적인 가치를 이야기합니다."
+        },
+        {
+            "no": "81",
+            "name": "밍글스 (Mingles)",
+            "country": "Korea",
+            "headline": "Korean Fine Dining",
+            "definition": "한식의 새로운 지평",
+            "description": "전통 한식에 서양 조리법을 조화시켜 미슐랭 스타를 유지하는 한국 미식의 자존심입니다."
+        },
+        {
+            "no": "82",
+            "name": "세이버리 (Savory)",
+            "country": "Korea",
+            "headline": "Social Dining Club",
+            "definition": "미식과 소셜링의 결합 (2026 Trend)",
+            "description": "단순한 식사를 넘어 취향이 맞는 사람들과 교류하는 하이엔드 소셜 다이닝 클럽입니다."
+        },
+        {
+            "no": "83",
+            "name": "LCDC",
+            "country": "Korea",
+            "headline": "Travel & Story",
+            "definition": "여행과 이야기를 담은 복합 공간",
+            "description": "공간 자체가 하나의 여행지처럼 설계된 성수동의 대형 복합 문화 플랫폼입니다."
+        },
+        {
+            "no": "84",
+            "name": "콤포트 서울 (Comfort Seoul)",
+            "country": "Korea",
+            "headline": "Photographer's View",
+            "definition": "서울의 가장 감각적인 뷰파인더",
+            "description": "톱 포토그래퍼 김희준이 만든 후암동의 복합 문화 공간. 블랙핑크 제니 등 톱 셀럽들이 사랑하는 아지트이자, 전시와 카페, 편집샵이 결합된 서울 힙스터들의 현재진행형 성지입니다."
+        },
+        {
+            "no": "95",
+            "name": "파지티브호텔",
+            "country": "Korea",
+            "headline": "Wellness Lifestyle",
+            "definition": "먹는 것까지 디자인하는 웰니스",
+            "description": "단순한 건강식품이 아닌, '굿 웰니스(Good Wellness)' 라이프스타일을 제안합니다. 지중해식 식단과 요가, 명상을 결합하여 자기관리에 철저한 CEO들에게 어필합니다."
+        },
+        {
+            "no": "137",
+            "name": "디앤디파트먼트 (D&Department)",
+            "country": "Japan",
+            "headline": "Long Life Design",
+            "definition": "유행하지 않아도 좋은 물건",
+            "description": "디자이너 나가오카 겐메이가 제안하는 \"오래 지속되는 디자인\". 지역의 특산품과 재활용품을 큐레이션하며 물건의 본질을 생각하게 합니다."
+        },
+        {
+            "no": "138",
+            "name": "커피 마메야 (Koffee Mameya)",
+            "country": "Japan",
+            "headline": "Coffee Sommelier",
+            "definition": "커피를 처방해주는 약국 같은 카페",
+            "description": "간판도, 좌석도 없습니다. 오직 바리스타와 상담을 통해 전 세계 희귀 원두 중 내 취향에 맞는 커피를 '처방'받는 경험을 팝니다."
+        },
+        {
+            "no": "139",
+            "name": "트렁크 호텔 (TRUNK Hotel)",
+            "country": "Japan",
+            "headline": "Socializing Hotel",
+            "definition": "도쿄 크리에이터들의 사교장",
+            "description": "숙박을 넘어 도쿄의 힙스터들이 모여 파티하고 교류하는 소셜라이징 호텔입니다. 지역 사회와 상생하며 가장 쿨한 도쿄의 바이브를 느낄 수 있습니다."
+        },
+        {
+            "no": "140",
+            "name": "빔즈 재팬 (BEAMS Japan)",
+            "country": "Japan",
+            "headline": "Souvenir from Tokyo",
+            "definition": "일본의 전통을 가장 힙하게 큐레이션",
+            "description": "신주쿠에 위치한 빔즈의 프로젝트 스토어. 일본의 전통 공예품, 식료품, 기념품을 빔즈의 시선으로 위트 있게 재해석하여 소개합니다."
+        },
+        {
+            "no": "142",
+            "name": "긴자 소니 파크 (Ginza Sony Park)",
+            "country": "Japan",
+            "headline": "Park in the City",
+            "definition": "건물을 허물고 만든 도심 속 공원",
+            "description": "소니 빌딩을 허물고 그 자리를 공원으로 개방했습니다. 끊임없이 실험적인 전시와 이벤트를 열며 '공간의 비움'이 주는 가치를 보여줍니다."
+        },
+        {
+            "no": "161",
+            "name": "티퍼런스 (Teafference)",
+            "country": "Korea",
+            "headline": "Purple Tea Beauty",
+            "definition": "보랏빛 차의 항산화 에너지",
+            "description": "케냐의 퍼플티(Purple Tea)를 베이스로 한 프리미엄 티 & 스킨케어 브랜드. 익선동의 감각적인 플래그십 스토어와 함께 웰니스 라이프를 제안합니다."
+        },
+        {
+            "no": "162",
+            "name": "비비앙 (BIBIANG)",
+            "country": "Korea",
+            "headline": "Niche Scent Fantasy",
+            "definition": "향기로 쓰는 판타지 소설",
+            "description": "독특하고 몽환적인 향조로 2030 여성들에게 '나만 알고 싶은 향수'로 불리는 니치 퍼퓸. 감각적인 보틀 디자인이 특징입니다."
+        },
+        {
+            "no": "163",
+            "name": "플르부아 (Pleuvoir)",
+            "country": "Korea",
+            "headline": "Scent of Rain",
+            "definition": "비 온 뒤의 깨끗한 살냄새",
+            "description": "제니, 수지 등 톱 셀럽들이 애용하며 입소문 난 브랜드. 감각적인 타이포그래피 패키지와 은은한 향으로 선물하기 좋은 아이템 1순위입니다."
+        },
+        {
+            "no": "164",
+            "name": "센녹 (Sennok)",
+            "country": "Korea",
+            "headline": "Bath & Ritual",
+            "definition": "목욕을 예술로 만드는 시간",
+            "description": "\"목욕은 영혼을 씻는 의식\"이라는 철학의 배스 & 바디 브랜드. 깨끗한 파란색 패키지와 자연스러운 향기는 욕실을 힐링 공간으로 바꿔줍니다."
+        }
+    ],
+    "select_shop": [
+        {
+            "no": "96",
+            "name": "10 꼬르소 꼬모 (10 Corso Como)",
+            "country": "Italy/Korea",
+            "headline": "Slow Shopping",
+            "definition": "세계 최초의 편집샵, 라이프스타일의 원점",
+            "description": "\"쇼핑은 천천히 즐기는 예술이다\"라는 철학을 가진 편집샵의 시초. 패션, 디자인, 서적, 카페가 융합된 복합 문화 공간의 교과서입니다."
+        },
+        {
+            "no": "97",
+            "name": "스컬프 스토어 (Sculp Store)",
+            "country": "Korea",
+            "headline": "Sharp & Avant-garde",
+            "definition": "가장 날카로운 패션 큐레이션",
+            "description": "남성복 기반의 테크웨어, 아방가르드, 고프코어 브랜드를 가장 심도 있게 다룹니다. 패션 고관여자들이 인정하는 독보적인 바잉 감각을 가졌습니다."
+        },
+        {
+            "no": "98",
+            "name": "슬로우 스테디 클럽",
+            "country": "Korea",
+            "headline": "Daily Aesthetics",
+            "definition": "일상 속의 미학, 시티보이의 정석",
+            "description": "\"느리지만 꾸준하게\"라는 모토로, 변하지 않는 가치를 지닌 브랜드들을 소개합니다. 깔끔하고 정제된 라이프스타일 큐레이션이 돋보입니다."
+        },
+        {
+            "no": "99",
+            "name": "하이츠 스토어 (Heights)",
+            "country": "Korea",
+            "headline": "Youth Culture Platform",
+            "definition": "지금 서울의 젊음을 대변하는 곳",
+            "description": "패션뿐 아니라 바이닐, 아트북, 인센스 등 유스 컬처(Youth Culture) 전반을 아우르는 힙스터들의 편의점 같은 공간입니다."
+        },
+        {
+            "no": "100",
+            "name": "에크루 (Ecru)",
+            "country": "Korea",
+            "headline": "Silent Luxury",
+            "definition": "조용한 럭셔리의 선구자",
+            "description": "요란하지 않지만 소재와 디테일에 집착하는 일본/유럽 브랜드를 소개합니다. 드러내지 않는 멋을 아는 마니아층이 매우 두텁습니다."
+        },
+        {
+            "no": "101",
+            "name": "더 콘란샵 (The Conran Shop)",
+            "country": "UK/Korea",
+            "headline": "Design Life",
+            "definition": "영국 프리미엄 라이프스타일 큐레이션",
+            "description": "테렌스 콘란 경이 설립한 세계적인 리빙 편집샵. 가구, 조명, 키친웨어 등 디자인이 훌륭한 삶의 도구들을 집대성했습니다."
+        },
+        {
+            "no": "102",
+            "name": "루밍 (Rooming)",
+            "country": "Korea",
+            "headline": "Living Curator",
+            "definition": "아이와 어른 모두를 위한 디자인",
+            "description": "프리미엄 가구부터 키즈 아이템까지, 집에 놓이는 모든 물건에 디자인 가치를 부여합니다. 국내 리빙 편집샵의 1세대이자 대표주자입니다."
+        },
+        {
+            "no": "103",
+            "name": "분더샵 (Boon the Shop)",
+            "country": "Korea",
+            "headline": "The Temple of Taste",
+            "definition": "한국 하이엔드 패션의 성지",
+            "description": "대한민국 최초이자 최고의 럭셔리 편집샵. 글로벌 명품 브랜드들이 한국 진출 시 가장 먼저 문을 두드리는, 트렌드의 최전선이자 권위입니다."
+        },
+        {
+            "no": "104",
+            "name": "비이커 (Beaker)",
+            "country": "Korea",
+            "headline": "Melting Pot of Trends",
+            "definition": "글로벌 트렌드와 서울의 가교",
+            "description": "컨템포러리 패션과 라이프스타일을 가장 발 빠르게 소개합니다. 실험적인 브랜드와 지속 가능한 패션을 믹스하여 대중적인 힙(Hip)을 이끕니다."
+        },
+        {
+            "no": "105",
+            "name": "레어마켓 (Rare Market)",
+            "country": "Korea",
+            "headline": "K-Fashion Incubator",
+            "definition": "희소하고 독창적인 안목의 결정체",
+            "description": "\"남들과 다른(Rare) 것이 아니면 팔지 않는다\"는 원칙 하에, 웰동 등 글로벌 라이징 브랜드와 K-패션을 인큐베이팅하는 트렌드 세터입니다."
+        },
+        {
+            "no": "106",
+            "name": "유니페어 (Unipair)",
+            "country": "Korea",
+            "headline": "Gentleman's Steps",
+            "definition": "클래식 구두의 모든 것",
+            "description": "좋은 구두를 신고 관리하는 문화를 한국에 정착시킨 장본인. 알덴, 에드워드 그린 등 전 세계 명품 구두를 심도 있게 큐레이션합니다."
+        },
+        {
+            "no": "107",
+            "name": "엠프티 (Empty)",
+            "country": "Korea",
+            "headline": "Empty but Full",
+            "definition": "무신사가 만든 하이엔드 실험실",
+            "description": "텅 빈 공간을 디자이너의 개성으로 채운다는 컨셉. 국내외 가장 실험적이고 핫한 디자이너 브랜드를 소개하며 시각적 충격을 줍니다."
+        },
+        {
+            "no": "108",
+            "name": "샌프란시스코 마켓",
+            "country": "Korea",
+            "headline": "Heritage Archive",
+            "definition": "이탈리안 캐주얼과 아메리칸 빈티지의 정수",
+            "description": "남성복의 클래식과 헤리티지를 깊이 있게 다루는 샵입니다. 유행보다 '영원한 멋'을 추구하는 신사들의 놀이터입니다."
+        },
+        {
+            "no": "109",
+            "name": "웍스아웃 (Worksout)",
+            "country": "Korea",
+            "headline": "Street Culture Hub",
+            "definition": "스트릿 컬처의 거대한 움직임",
+            "description": "칼하트 WIP를 비롯해 전 세계 스트릿 및 서브컬처 브랜드를 소개합니다. 단순 의류 판매를 넘어 아티스트 전시와 파티를 여는 문화 허브입니다."
+        },
+        {
+            "no": "110",
+            "name": "카시나 (Kasina)",
+            "country": "Korea",
+            "headline": "Street Godfather",
+            "definition": "한국 스트릿/스니커즈 씬의 대부",
+            "description": "부산의 스케이트 샵에서 시작해 나이키가 가장 주목하는 글로벌 파트너로 성장했습니다. 한국 스트릿 문화의 역사 그 자체입니다."
+        },
+        {
+            "no": "135",
+            "name": "다이칸야마 츠타야 (T-Site)",
+            "country": "Japan",
+            "headline": "Library in the Woods",
+            "definition": "책이 아닌 라이프스타일을 파는 서점",
+            "description": "\"취향을 설계하는 숲\"이라는 컨셉의 복합 문화 공간. 책, 음악, 영화, 커피가 유기적으로 연결되어 CEO에게 가장 큰 영감을 주는 장소입니다."
+        },
+        {
+            "no": "136",
+            "name": "네펜데스 (Nepenthes)",
+            "country": "Japan",
+            "headline": "Cult of Personality",
+            "definition": "매니아를 위한 독보적인 취향의 요새",
+            "description": "니들스, 엔지니어드 가먼츠 등을 배출한 편집샵이자 브랜드 인큐베이터. 유행을 따르지 않고 자신들만의 확고한 세계관을 구축했습니다."
+        }
+    ]
+};
 
 const INFO = {
     favorites: {title: 'My Favorites', subtitle: '내가 좋아요한 브랜드들. 나만의 특별한 컬렉션.', count: 0},
     philosophy: {title: 'Philosophy', subtitle: '철학과 신념으로 세상을 바꾸는 브랜드들. 지속가능성, 장인정신, 혁신적 사고가 만든 본질의 가치.', count: 39},
     visual: {title: 'Visual', subtitle: '압도적인 비주얼로 시선을 사로잡는 브랜드들. 디자인 자체가 메시지이며, 예술이 되는 순간.', count: 27},
     scarcity: {title: 'Scarcity', subtitle: '희소성이 만드는 가치. 없어서 못 사는 브랜드, 한정된 수량이 만드는 열광.', count: 34},
-    narrative: {title: 'Narrative', subtitle: '강력한 스토리텔링으로 감정을 움직이는 브랜드들. 제품 너머의 이야기가 팬덤을 만든다.', count: 25},
-    inspiration: {title: 'Inspiration', subtitle: '영감을 주는 공간과 경험. 방문 자체가 여정이 되는 곳, 삶의 방식을 제안하는 브랜드.', count: 25},
+    narrative: {title: 'Narrative', subtitle: '강력한 스토리텔링으로 감정을 움직이는 브랜드들. 제품 너머의 이야기가 팬덤을 만든다.', count: 26},
+    inspiration: {title: 'Inspiration', subtitle: '영감을 주는 공간과 경험. 방문 자체가 여정이 되는 곳, 삶의 방식을 제안하는 브랜드.', count: 24},
     select_shop: {title: 'Select Shop', subtitle: '세상의 아름다움을 큐레이션하는 편집샵들. 안목과 취향이 만드는 새로운 세계.', count: 17}
 };
 
@@ -1561,6 +2941,102 @@ function saveFavorites() {
     localStorage.setItem('mmall_favorites', JSON.stringify([...favorites]));
     updateFavoriteCount();
     updateAZFavorites();
+}
+
+function shareFavorites() {
+    if (favorites.size === 0) {
+        alert('좋아요한 브랜드가 없습니다.');
+        return;
+    }
+    
+    // 좋아요한 브랜드 리스트 생성
+    const brandList = Array.from(favorites).sort();
+    
+    // 공유 텍스트 생성
+    let shareText = '🤍 M·MALL INVITED - My Favorites\n\n';
+    shareText += `총 ${brandList.length}개 브랜드\n\n`;
+    brandList.forEach((brand, index) => {
+        shareText += `${index + 1}. ${brand}\n`;
+    });
+    shareText += '\n✨ M·MALL INVITED 2026';
+    
+    // Web Share API 지원 여부 확인 (주로 모바일)
+    if (navigator.share) {
+        navigator.share({
+            title: 'M·MALL INVITED - My Favorites',
+            text: shareText
+        }).catch((error) => {
+            // 공유 취소는 무시
+            if (error.name !== 'AbortError') {
+                copyToClipboardFallback(shareText);
+            }
+        });
+    } else {
+        // Web Share API 미지원 시 클립보드 복사
+        copyToClipboardFallback(shareText);
+    }
+}
+
+function copyToClipboardFallback(text) {
+    // 방법 1: Clipboard API 시도
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                showButtonFeedback();
+            })
+            .catch(() => {
+                // 방법 2: textarea fallback (권한 거부 시)
+                copyUsingTextarea(text);
+            });
+    } else {
+        // 방법 2: textarea fallback
+        copyUsingTextarea(text);
+    }
+}
+
+function copyUsingTextarea(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    textarea.style.top = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            showButtonFeedback();
+        } else {
+            alert('복사에 실패했습니다. 브라우저 설정을 확인해주세요.');
+        }
+    } catch (err) {
+        alert('복사에 실패했습니다. 브라우저 설정을 확인해주세요.');
+    }
+    
+    document.body.removeChild(textarea);
+}
+
+function showButtonFeedback() {
+    // 공유하기 버튼 찾기
+    const shareBtn = document.querySelector('.share-btn');
+    if (!shareBtn) return;
+    
+    // 원래 텍스트 저장
+    const originalText = shareBtn.textContent;
+    
+    // 버튼 텍스트 변경
+    shareBtn.textContent = 'List Copied';
+    shareBtn.style.color = 'var(--gold)';
+    shareBtn.style.borderColor = 'var(--gold)';
+    
+    // 1.5초 후 원래대로 복구
+    setTimeout(() => {
+        shareBtn.textContent = originalText;
+        shareBtn.style.color = '';
+        shareBtn.style.borderColor = '';
+    }, 1500);
 }
 
 function toggleFavorite(brandName, event) {
@@ -1650,6 +3126,9 @@ function showPage(cat) {
         html += '<h1 class="page-title">' + info.title + '</h1>';
         html += '<p class="page-subtitle">' + info.subtitle + '</p>';
         html += '<p class="brand-count">' + favBrands.length + ' BRANDS</p>';
+        if (favBrands.length > 0) {
+            html += '<button class="share-btn" onclick="shareFavorites()">공유하기</button>';
+        }
         html += '</div>';
         
         if (favBrands.length === 0) {
@@ -1672,7 +3151,7 @@ function showPage(cat) {
                 html += '<p class="brand-headline">' + b.headline + '</p>';
                 html += '<p class="brand-definition">' + b.definition + '</p>';
                 html += '<p class="brand-description">' + b.description + '</p>';
-                html += '<a href="https://www.google.com/search?q=' + encodeURIComponent(b.name) + '" target="_blank" rel="noopener noreferrer" class="brand-link">구글 검색하기 →</a>';
+                html += '<a href="https://www.google.com/search?q=' + encodeURIComponent(b.name) + '" target="_blank" rel="noopener noreferrer" class="brand-link">Googling →</a>';
                 html += '</div>';
             });
             html += '</div>';
@@ -1723,7 +3202,7 @@ function showPage(cat) {
             html += '<p class="brand-headline">' + b.headline + '</p>';
             html += '<p class="brand-definition">' + b.definition + '</p>';
             html += '<p class="brand-description">' + b.description + '</p>';
-            html += '<a href="https://www.google.com/search?q=' + encodeURIComponent(b.name) + '" target="_blank" rel="noopener noreferrer" class="brand-link">구글 검색하기 →</a>';
+            html += '<a href="https://www.google.com/search?q=' + encodeURIComponent(b.name) + '" target="_blank" rel="noopener noreferrer" class="brand-link">Googling →</a>';
             html += '</div>';
         });
         
