@@ -287,8 +287,8 @@ body {
 }
 
 .brand-index-list {
-    column-count: 5;
-    column-gap: 40px;
+    column-count: 6;
+    column-gap: 50px;
     margin: 0 auto;
 }
 
@@ -438,7 +438,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2px;
     background: rgba(184, 149, 106, 0.15);
     box-sizing: border-box;
@@ -592,12 +592,12 @@ body {
 }
 
 .brands-grid {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 40px auto;
     padding: 0 20px 60px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -794,6 +794,337 @@ footer {
 
 .nav-item.favorites:hover {
     color: var(--gold);
+}
+
+/* ===== PC OPTIMIZATION (769px and above) ===== */
+@media (min-width: 769px) {
+    /* Main Index Page - Better spacing and sizing */
+    #index.page.active {
+        padding: 100px 60px !important;
+    }
+    
+    .hero-section {
+        margin-bottom: 80px !important;
+    }
+    
+    .year-label {
+        font-size: 1.1rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .main-title {
+        font-size: 8rem !important;
+        margin-bottom: 40px !important;
+    }
+    
+    .main-subtitle {
+        font-size: 5rem !important;
+        margin-top: 15px !important;
+    }
+    
+    .hero-description {
+        font-size: 1.5rem !important;
+        max-width: 900px !important;
+        line-height: 1.8 !important;
+    }
+    
+    .tagline {
+        margin: 50px 0 60px !important;
+    }
+    
+    .tagline-text {
+        font-size: 1.8rem !important;
+        line-height: 1.7 !important;
+    }
+    
+    /* Search Box - Better width */
+    .search-section-main {
+        max-width: 900px !important;
+        margin: 60px auto !important;
+    }
+    
+    .search-input {
+        padding: 22px 65px 22px 32px !important;
+        font-size: 1.1rem !important;
+        border-radius: 60px !important;
+    }
+    
+    .search-icon {
+        right: 32px !important;
+        font-size: 1.4rem !important;
+    }
+    
+    /* Categories Grid - FORCE 2 columns on PC */
+    .categories-grid {
+        max-width: 1400px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 4px !important;
+        padding: 0 60px !important;
+    }
+    
+    .category-card {
+        padding: 50px 45px !important;
+        min-height: 320px !important;
+        transition: all 0.3s ease;
+    }
+    
+    .category-card:hover {
+        background: rgba(245, 243, 237, 0.95) !important;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(139, 115, 85, 0.15);
+    }
+    
+    .category-number {
+        font-size: 5rem !important;
+        margin-bottom: 25px !important;
+        opacity: 0.15 !important;
+    }
+    
+    .category-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 18px !important;
+    }
+    
+    .category-subtitle {
+        font-size: 1.05rem !important;
+        margin-bottom: 32px !important;
+        line-height: 1.8 !important;
+    }
+    
+    .category-count {
+        font-size: 0.9rem !important;
+    }
+    
+    /* A-Z Brand Index - Better columns */
+    .brand-index-section {
+        max-width: 1800px !important;
+        margin: 120px auto 100px !important;
+        padding: 100px 60px !important;
+    }
+    
+    .brand-index-title {
+        font-size: 3rem !important;
+        margin-bottom: 70px !important;
+    }
+    
+    .brand-index-list {
+        column-count: 6 !important;
+        column-gap: 60px !important;
+    }
+    
+    .brand-index-item {
+        font-size: 1rem !important;
+        padding: 14px 0 !important;
+        transition: all 0.2s ease;
+    }
+    
+    .brand-index-item:hover {
+        color: var(--gold);
+        padding-left: 10px;
+        font-weight: 500;
+    }
+    
+    /* Category/Favorites Pages Header */
+    .header {
+        padding: 60px 80px !important;
+    }
+    
+    .back-link {
+        font-size: 1.05rem !important;
+        transition: all 0.2s ease;
+    }
+    
+    .back-link:hover {
+        transform: translateX(-6px);
+        color: var(--gold);
+    }
+    
+    .logo {
+        font-size: 1.05rem !important;
+    }
+    
+    /* Page Hero */
+    .page-hero {
+        padding: 100px 60px 80px !important;
+        max-width: 1200px !important;
+    }
+    
+    .page-title {
+        font-size: 4.5rem !important;
+        margin-bottom: 35px !important;
+    }
+    
+    .page-subtitle {
+        font-size: 1.2rem !important;
+        line-height: 1.9 !important;
+        margin-bottom: 25px !important;
+        padding: 0 60px !important;
+    }
+    
+    .brand-count {
+        font-size: 1rem !important;
+    }
+    
+    .share-btn {
+        margin-top: 40px !important;
+        padding: 14px 36px !important;
+        font-size: 0.95rem !important;
+        border-radius: 25px !important;
+        transition: all 0.25s ease;
+    }
+    
+    .share-btn:hover {
+        background: rgba(184, 149, 106, 0.1) !important;
+        transform: translateY(-2px);
+        border-color: var(--gold) !important;
+        color: var(--gold) !important;
+    }
+    
+    /* Brand Cards Grid - FORCE 3 columns on PC */
+    .brands-grid {
+        max-width: 1800px !important;
+        margin: 80px auto !important;
+        padding: 0 60px 100px !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 40px !important;
+    }
+    
+    .brand-card {
+        padding: 45px 40px !important;
+        transition: all 0.3s ease;
+    }
+    
+    .brand-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(139, 115, 85, 0.18);
+        border-color: rgba(184, 149, 106, 0.3);
+    }
+    
+    .brand-name {
+        font-size: 1.4rem !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .brand-headline {
+        font-size: 0.95rem !important;
+        margin-bottom: 14px !important;
+    }
+    
+    .brand-definition {
+        font-size: 1rem !important;
+        margin-bottom: 14px !important;
+    }
+    
+    .brand-description {
+        font-size: 0.9rem !important;
+        line-height: 1.8 !important;
+        margin-bottom: 22px !important;
+    }
+    
+    .brand-link {
+        font-size: 0.85rem !important;
+        transition: all 0.2s ease;
+    }
+    
+    .brand-link:hover {
+        color: var(--gold);
+        border-bottom-color: var(--charcoal);
+        padding-left: 2px;
+    }
+    
+    .brand-meta {
+        font-size: 0.85rem !important;
+        margin-bottom: 14px !important;
+    }
+    
+    .brand-number {
+        font-size: 3rem !important;
+        opacity: 0.12 !important;
+    }
+    
+    /* Favorite Button */
+    .favorite-btn {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.25rem !important;
+    }
+    
+    .favorite-btn:hover {
+        transform: scale(1.18);
+        box-shadow: 0 4px 16px rgba(184, 149, 106, 0.3);
+    }
+    
+    /* Favorites Icon on Category Card */
+    .favorites-icon {
+        width: 42px !important;
+        height: 42px !important;
+        margin-bottom: 18px !important;
+    }
+    
+    .fav-heart {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 100px 80px !important;
+        font-size: 0.95rem !important;
+    }
+    
+    /* Floating Navigation */
+    .floating-nav {
+        bottom: 50px !important;
+        right: 50px !important;
+    }
+    
+    .nav-toggle {
+        width: 68px !important;
+        height: 68px !important;
+        font-size: 1.5rem !important;
+    }
+    
+    .nav-toggle:hover {
+        transform: scale(1.08);
+    }
+    
+    .nav-menu {
+        bottom: 90px !important;
+        min-width: 240px !important;
+        padding: 14px !important;
+    }
+    
+    .nav-item {
+        padding: 14px 18px !important;
+        font-size: 1rem !important;
+    }
+    
+    .nav-item:hover {
+        padding-left: 24px !important;
+    }
+    
+    /* Search Results */
+    .search-results {
+        max-height: 600px !important;
+        border-radius: 16px !important;
+    }
+    
+    .search-result-item {
+        padding: 20px 32px !important;
+    }
+    
+    .search-result-item:hover {
+        padding-left: 40px !important;
+        background: rgba(184, 149, 106, 0.08) !important;
+    }
+    
+    .search-result-name {
+        font-size: 1.1rem !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .search-result-meta {
+        font-size: 0.95rem !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2977,6 +3308,12 @@ const INFO = {
 // Favorites Management - Use Array to maintain order
 let favorites = JSON.parse(localStorage.getItem('mmall_favorites') || '[]');
 
+// Ensure favorites is always an array
+if (!Array.isArray(favorites)) {
+    favorites = [];
+    localStorage.setItem('mmall_favorites', '[]');
+}
+
 function saveFavorites() {
     localStorage.setItem('mmall_favorites', JSON.stringify(favorites));
     updateFavoriteCount();
@@ -3229,12 +3566,12 @@ function updateAZFavorites() {
 }
 
 function showPage(cat) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    
-    // 즉시 스크롤
-    window.scrollTo(0, 0);
+    // 먼저 스크롤을 최상단으로 이동 (페이지 전환 전)
+    window.scrollTo({top: 0, behavior: 'instant'});
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+    
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     
     if (cat === 'index') {
         document.getElementById('index').classList.add('active');
@@ -3298,7 +3635,7 @@ function showPage(cat) {
                 html += '<p class="brand-headline">' + b.headline + '</p>';
                 html += '<p class="brand-definition">' + b.definition + '</p>';
                 html += '<p class="brand-description">' + b.description + '</p>';
-                html += '<a href="https://www.google.com/search?q=' + encodeURIComponent(b.name) + '" target="_blank" rel="noopener noreferrer" class="brand-link">Googling →</a>';
+                html += '<a href="https://www.google.com/search?q=' + encodeURIComponent(b.name + ' 왜 인기있어?') + '" target="_blank" rel="noopener noreferrer" class="brand-link">Googling →</a>';
                 html += '</div>';
             });
             html += '</div>';
@@ -3349,7 +3686,7 @@ function showPage(cat) {
             html += '<p class="brand-headline">' + b.headline + '</p>';
             html += '<p class="brand-definition">' + b.definition + '</p>';
             html += '<p class="brand-description">' + b.description + '</p>';
-            html += '<a href="https://www.google.com/search?q=' + encodeURIComponent(b.name) + '" target="_blank" rel="noopener noreferrer" class="brand-link">Googling →</a>';
+            html += '<a href="https://www.google.com/search?q=' + encodeURIComponent(b.name + ' 왜 인기있어?') + '" target="_blank" rel="noopener noreferrer" class="brand-link">Googling →</a>';
             html += '</div>';
         });
         
@@ -3361,9 +3698,16 @@ function showPage(cat) {
     
     page.classList.add('active');
     
-    // 페이지 활성화 후 다시 한번 스크롤 (확실하게)
+    // 페이지 활성화 후 다시 한번 최상단으로 강제 이동
+    requestAnimationFrame(() => {
+        window.scrollTo({top: 0, behavior: 'instant'});
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    });
+    
+    // 확실하게 한번 더
     setTimeout(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo({top: 0, behavior: 'instant'});
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
     }, 0);
