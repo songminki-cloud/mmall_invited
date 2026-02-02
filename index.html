@@ -268,12 +268,12 @@ body {
     color: var(--bronze);
 }
 
-/* A-Z Brand Index - Minimal Design */
+/* A-Z Brand Index - Clean Grid Layout */
 .brand-index-section {
     max-width: 1400px;
     width: 100%;
-    margin: 80px auto 60px;
-    padding: 60px 20px;
+    margin: 50px auto 40px;
+    padding: 40px 20px 40px;
     border-top: 1px solid rgba(184, 149, 106, 0.2);
     box-sizing: border-box;
 }
@@ -282,33 +282,44 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: var(--charcoal);
 }
 
 .brand-index-list {
-    column-count: 6;
-    column-gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
     margin: 0 auto;
-}
-
-.brand-index-list.expanded {
-    max-height: none;
+    max-width: 1200px;
 }
 
 .brand-index-item {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--charcoal);
-    padding: 10px 0;
+    padding: 11px 15px;
     cursor: pointer;
-    break-inside: avoid;
     border-bottom: 1px solid rgba(184, 149, 106, 0.08);
-    display: block;
+    transition: all 0.2s ease;
+    line-height: 1.4;
 }
 
 .brand-index-item:active {
     color: var(--gold);
 }
+
+/* Favorite indicator in A-Z list */
+.brand-index-item.favorited {
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.brand-index-item.favorited::before {
+    content: '♥ ';
+    color: var(--gold);
+    margin-right: 6px;
+}
+
 
 /* Favorites Button */
 .favorite-btn {
@@ -401,17 +412,6 @@ body {
     color: var(--gold);
 }
 
-/* Favorite indicator in A-Z list */
-.brand-index-item.favorited {
-    color: var(--gold);
-    font-weight: 600;
-}
-
-.brand-index-item.favorited::before {
-    content: '🤍 ';
-    margin-right: 4px;
-}
-
 .stat-item {
     text-align: center;
 }
@@ -432,13 +432,21 @@ body {
     text-transform: uppercase;
 }
 
+.categories-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
 .categories-grid {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 2px;
     background: rgba(184, 149, 106, 0.15);
     box-sizing: border-box;
@@ -596,7 +604,7 @@ body {
     margin: 40px auto;
     padding: 0 20px 60px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     width: 100%;
     box-sizing: border-box;
@@ -617,16 +625,6 @@ body {
     box-shadow: 0 8px 20px rgba(26, 26, 26, 0.06);
 }
 
-/* A-Z Favorite Indicator */
-.brand-index-item.favorited {
-    color: var(--gold);
-    font-weight: 600;
-}
-
-.brand-index-item.favorited::before {
-    content: '♥ ';
-    color: var(--gold);
-}
 
 .brand-meta {
     display: flex;
@@ -857,7 +855,7 @@ footer {
     /* Categories Grid - FORCE 2 columns on PC */
     .categories-grid {
         max-width: 1400px !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: 1fr 1fr !important;
         gap: 4px !important;
         padding: 0 60px !important;
     }
@@ -985,7 +983,7 @@ footer {
         max-width: 1800px !important;
         margin: 80px auto !important;
         padding: 0 60px 100px !important;
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
         gap: 40px !important;
     }
     
@@ -1163,9 +1161,9 @@ footer {
     }
     
     .categories-grid {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-        gap: 1px;
+        grid-template-columns: 1fr !important;
+        padding: 0 20px !important;
+        gap: 1px !important;
     }
     
     /* 모바일: hover 효과 완전 제거 */
@@ -1227,24 +1225,24 @@ footer {
     
     /* 모바일 A-Z 인덱스 */
     .brand-index-section {
-        padding: 40px 20px;
-        margin: 60px auto 40px;
+        padding: 30px 20px 30px;
+        margin: 40px auto 20px;
     }
     
     .brand-index-title {
         font-size: 1.5rem;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     
     .brand-index-list {
-        column-count: 2;
-        column-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .brand-index-item {
         font-size: 0.85rem;
-        padding: 10px 0;
+        padding: 10px 12px;
     }
+
     
     /* 모바일 전용: 효과 제거 */
     .category-card {
@@ -1336,8 +1334,10 @@ footer {
         <div class="search-results" id="searchResults"></div>
     </div>
 
-    <div class="categories-grid">
-        <div class="category-card favorites-card" onclick="showPage('favorites')">
+    <!-- Categories Section Wrapper -->
+    <div class="categories-wrapper">
+        <div class="categories-grid">
+            <div class="category-card favorites-card" onclick="showPage('favorites')">
             <div>
                 <div class="favorites-icon" id="favIcon">
                     <span class="fav-heart">♡</span>
@@ -1397,6 +1397,9 @@ footer {
         
         </div>
         </div>
+    </div>
+    <!-- End Categories Wrapper -->
+    
     <!-- A-Z Brand Index -->
     <div class="brand-index-section">
         <h2 class="brand-index-title">ALL BRANDS A–Z</h2>
@@ -1907,7 +1910,13 @@ footer {
             </div>
         </div>
     </div>
-    </div>
+    
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 40px 20px 60px; color: var(--bronze); font-size: 0.85rem; border-top: 1px solid rgba(184, 149, 106, 0.15); margin-top: 30px;">
+        <p style="margin: 0 0 8px 0; letter-spacing: 0.05em;">© 2026 M·MALL INVITED</p>
+        <p style="margin: 0; opacity: 0.7; font-size: 0.8rem;">Curated Collection of Premium Brands</p>
+    </footer>
+    
     </div>
 </div>
         
