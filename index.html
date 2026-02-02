@@ -297,7 +297,7 @@ body {
 .brand-index-item {
     font-size: 0.88rem;
     color: var(--charcoal);
-    padding: 11px 15px;
+    padding: 11px 10px;
     cursor: pointer;
     border-bottom: 1px solid rgba(184, 149, 106, 0.08);
     transition: all 0.2s ease;
@@ -436,7 +436,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -857,11 +857,11 @@ footer {
         max-width: 1400px !important;
         grid-template-columns: 1fr 1fr !important;
         gap: 4px !important;
-        padding: 0 60px !important;
+        padding: 0 20px !important;
     }
     
     .category-card {
-        padding: 50px 45px !important;
+        padding: 50px 30px !important;
         min-height: 320px !important;
         transition: all 0.3s ease;
     }
@@ -1127,11 +1127,11 @@ footer {
 
 @media (max-width: 768px) {
     #index {
-        padding: 40px 20px;
+        padding: 40px 10px;
     }
     
     .hero-section {
-        padding: 40px 20px;
+        padding: 40px 10px;
         margin-bottom: 15px;
     }
     
@@ -1152,7 +1152,7 @@ footer {
     
     .tagline {
         margin: 20px 0 30px;
-        padding: 0 20px;
+        padding: 0 10px;
     }
     
     .tagline-text {
@@ -1162,13 +1162,13 @@ footer {
     
     .categories-grid {
         grid-template-columns: 1fr !important;
-        padding: 0 20px !important;
+        padding: 0 !important;
         gap: 1px !important;
     }
     
     /* 모바일: hover 효과 완전 제거 */
     .category-card {
-        padding: 40px 30px;
+        padding: 40px 15px;
         min-height: 280px;
         border: 1px solid rgba(184, 149, 106, 0.2);
     }
@@ -1209,7 +1209,7 @@ footer {
     
     /* 모바일 검색 */
     .search-section-main {
-        padding: 0 20px;
+        padding: 0 10px;
         margin: 25px auto;
     }
     
@@ -1225,7 +1225,7 @@ footer {
     
     /* 모바일 A-Z 인덱스 */
     .brand-index-section {
-        padding: 30px 20px 30px;
+        padding: 30px 10px 30px;
         margin: 40px auto 20px;
     }
     
@@ -1236,12 +1236,11 @@ footer {
     
     .brand-index-list {
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-flow: row;
     }
     
     .brand-index-item {
         font-size: 0.85rem;
-        padding: 10px 12px;
+        padding: 10px 8px;
     }
 
     
@@ -1954,49 +1953,6 @@ footer {
 </div>
 
 <script>
-// Reorder A-Z brand list for column-based reading (PC: 4 cols, Mobile: 2 cols)
-window.addEventListener('DOMContentLoaded', function() {
-    const brandList = document.getElementById('brandIndexList');
-    if (!brandList) return;
-    
-    const items = Array.from(brandList.children);
-    const totalItems = items.length;
-    
-    function reorderForColumns(numCols) {
-        const itemsPerCol = Math.ceil(totalItems / numCols);
-        const reordered = [];
-        
-        // Reorder: column by column
-        for (let col = 0; col < numCols; col++) {
-            for (let row = 0; row < itemsPerCol; row++) {
-                const index = col * itemsPerCol + row;
-                if (index < totalItems) {
-                    reordered.push(items[index]);
-                }
-            }
-        }
-        
-        // Clear and re-append in new order
-        brandList.innerHTML = '';
-        reordered.forEach(item => brandList.appendChild(item));
-    }
-    
-    function updateLayout() {
-        // Reset to original order first
-        items.forEach(item => brandList.appendChild(item));
-        
-        // Apply column-based reordering based on screen size
-        if (window.innerWidth > 768) {
-            reorderForColumns(4); // PC: 4 columns
-        } else {
-            reorderForColumns(2); // Mobile: 2 columns
-        }
-    }
-    
-    updateLayout();
-    window.addEventListener('resize', updateLayout);
-});
-
 const DATA = {
     "philosophy": [
         {
