@@ -1236,6 +1236,7 @@ footer {
     
     .brand-index-list {
         grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: row;
     }
     
     .brand-index-item {
@@ -1953,6 +1954,49 @@ footer {
 </div>
 
 <script>
+// Reorder A-Z brand list for column-based reading (PC: 4 cols, Mobile: 2 cols)
+window.addEventListener('DOMContentLoaded', function() {
+    const brandList = document.getElementById('brandIndexList');
+    if (!brandList) return;
+    
+    const items = Array.from(brandList.children);
+    const totalItems = items.length;
+    
+    function reorderForColumns(numCols) {
+        const itemsPerCol = Math.ceil(totalItems / numCols);
+        const reordered = [];
+        
+        // Reorder: column by column
+        for (let col = 0; col < numCols; col++) {
+            for (let row = 0; row < itemsPerCol; row++) {
+                const index = col * itemsPerCol + row;
+                if (index < totalItems) {
+                    reordered.push(items[index]);
+                }
+            }
+        }
+        
+        // Clear and re-append in new order
+        brandList.innerHTML = '';
+        reordered.forEach(item => brandList.appendChild(item));
+    }
+    
+    function updateLayout() {
+        // Reset to original order first
+        items.forEach(item => brandList.appendChild(item));
+        
+        // Apply column-based reordering based on screen size
+        if (window.innerWidth > 768) {
+            reorderForColumns(4); // PC: 4 columns
+        } else {
+            reorderForColumns(2); // Mobile: 2 columns
+        }
+    }
+    
+    updateLayout();
+    window.addEventListener('resize', updateLayout);
+});
+
 const DATA = {
     "philosophy": [
         {
